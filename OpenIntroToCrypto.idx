@@ -1,0 +1,142 @@
+\indexentry{George P\'{o}lya}{7}
+\indexentry{cryptography}{7}
+\indexentry{cryptology}{7}
+\indexentry{cryptanalysis}{7}
+\indexentry{cryptosystem}{8}
+\indexentry{cipher}{8}
+\indexentry{plaintext}{8}
+\indexentry{ciphertext}{8}
+\indexentry{key}{8}
+\indexentry{keystream}{8}
+\indexentry{symmetric cipher}{8}
+\indexentry{key exchange}{8}
+\indexentry{public-key cryptography}{8}
+\indexentry{computational complexity}{9}
+\indexentry{decision problem}{9}
+\indexentry{computational problem}{9}
+\indexentry{integer factorization problem}{9}
+\indexentry{polynomial time}{10}
+\indexentry{bits}{10}
+\indexentry{$\P$}{10}
+\indexentry{probabilistic polynomial time}{10}
+\indexentry{$\PP$}{10}
+\indexentry{non-deterministic polynomial time}{10}
+\indexentry{$\NP$}{10}
+\indexentry{$\NP$-complete}{10}
+\indexentry{$\NP$-hard}{10}
+\indexentry{exponential time}{10}
+\indexentry{Quadratic Sieve}{10}
+\indexentry{Number Field Sieve}{10}
+\indexentry{subexponential time}{10}
+\indexentry{easy problem}{10}
+\indexentry{hard problem}{10}
+\indexentry{cryptography}{11}
+\indexentry{steganography}{11}
+\indexentry{transposition cipher}{11}
+\indexentry{substitution cipher}{11}
+\indexentry{transposition cipher}{12}
+\indexentry{permutation}{12}
+\indexentry{hash function}{12}
+\indexentry{transposition cipher}{12}
+\indexentry{permutation cipher}{12}
+\indexentry{fractionation}{12}
+\indexentry{coding}{12}
+\indexentry{ASCII}{12}
+\indexentry{UTF-8}{12}
+\indexentry{transposition cipher}{12}
+\indexentry{permutation}{13}
+\indexentry{cycle}{13}
+\indexentry{permutation cipher}{13}
+\indexentry{modular arithmetic}{14}
+\indexentry{congruent}{14}
+\indexentry{modulo}{14}
+\indexentry{mod}{14}
+\indexentry{reduce}{14}
+\indexentry{inverse}{14}
+\indexentry{modular inverse}{14}
+\indexentry{Atbash}{15}
+\indexentry{monoalphabetic substitution cipher}{16}
+\indexentry{Vigen\`{e}re's cipher}{16}
+\indexentry{tabula recta}{16}
+\indexentry{Babbage, Charles}{16}
+\indexentry{Kasiski, Friedrich}{16}
+\indexentry{Vigen\`{e}re's cipher}{16}
+\indexentry{Friedman, William}{16}
+\indexentry{running key cipher}{17}
+\indexentry{tabula recta}{17}
+\indexentry{Miller, Frank}{18}
+\indexentry{one-time pad}{18}
+\indexentry{Vernam, Gilbert}{18}
+\indexentry{Mauborgne, Joseph}{18}
+\indexentry{bit}{18}
+\indexentry{stream}{18}
+\indexentry{byte}{18}
+\indexentry{scytale}{21}
+\indexentry{cipher machine}{21}
+\indexentry{Hebern, Arthur}{21}
+\indexentry{Damm, Arvid}{21}
+\indexentry{Koch, Alexander}{21}
+\indexentry{Scherbius, Arthur}{21}
+\indexentry{Enigma}{21}
+\indexentry{Turing, Alan}{21}
+\indexentry{Newman, Max}{21}
+\indexentry{Babbage, Charles}{21}
+\indexentry{Colossus}{21}
+\indexentry{ASCII}{21}
+\indexentry{ASCII, Extended}{21}
+\indexentry{Extended ASCII}{21}
+\indexentry{UTF-8}{21}
+\indexentry{stream cipher}{22}
+\indexentry{one-time pad}{23}
+\indexentry{keystream}{23}
+\indexentry{XOR}{23}
+\indexentry{seed}{23}
+\indexentry{random number generator}{23}
+\indexentry{pseudorandom number generator}{23}
+\indexentry{seed}{23}
+\indexentry{cryptographically secure}{23}
+\indexentry{seed}{23}
+\indexentry{Blum-Blum-Shub}{23}
+\indexentry{RSA}{23}
+\indexentry{quadratic residuosity problem}{23}
+\indexentry{integer factorization problem}{23}
+\indexentry{linear congruential generator}{24}
+\indexentry{linear congruential generator}{24}
+\indexentry{linear congruential generator}{24}
+\indexentry{linear congruential generator}{24}
+\indexentry{linear congruential generator}{24}
+\indexentry{linear congruential generator}{24}
+\indexentry{bit flipping attack}{26}
+\indexentry{man-in-the-middle attack}{26}
+\indexentry{message authentication code}{26}
+\indexentry{block cipher}{26}
+\indexentry{block}{26}
+\indexentry{Playfair cipher}{26}
+\indexentry{Hill cipher}{26}
+\indexentry{DES}{27}
+\indexentry{Data Encryption Standard}{27}
+\indexentry{Lucifer}{27}
+\indexentry{pseudorandom function}{27}
+\indexentry{AES}{28}
+\indexentry{Advanced Encryption Standard}{28}
+\indexentry{Rijndael}{28}
+\indexentry{brute force attack}{28}
+\indexentry{black-bag cryptanalysis}{29}
+\indexentry{rubber-hose cryptanalysis}{30}
+\indexentry{hash function}{31}
+\indexentry{one-way}{31}
+\indexentry{birthday problem}{31}
+\indexentry{group}{32}
+\indexentry{abelian}{32}
+\indexentry{phi function}{32}
+\indexentry{totient function}{32}
+\indexentry{subgroup}{32}
+\indexentry{primitive root}{32}
+\indexentry{binary exponentiation}{33}
+\indexentry{quadratic residue}{34}
+\indexentry{Legendre symbol}{34}
+\indexentry{field}{36}
+\indexentry{Kid Krypto}{37}
+\indexentry{elliptic curve}{39}
+\indexentry{Satoshi Nakamoto}{49}
+\indexentry{Bitcoin}{49}

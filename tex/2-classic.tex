@@ -1,0 +1,574 @@
+\chapter{Classical Cryptography}
+\label{ch:classical}
+
+   Cryptography \index{cryptography} has a handful of main branches including standard encryption and decryption of plaintexts, error detection and correction, and what is called {\bf steganography}\index{steganography}. Steganography comes from the Greek word $\sigma\tau\epsilon\gamma\alpha\nu o \varsigma$ ({\em steganos}), meaning ``concealed," and its aim is to conceal the existence of a message. Well-known examples of steganography are invisible ink, microdots, and Bible codes. While the main focus of this course is on mathematical aspects of cryptography, the topic of steganography is significant enough to merit some attention. (We should note that methods to detect steganography in digital files can involve some advanced mathematics.)
+
+   After discussing steganography, we will explore two main encryption methods used in classical cryptography: transposition ciphers \index{transposition cipher} and substitution ciphers. \index{substitution cipher} A {\bf transposition cipher} permutes the plaintext to obtain a ciphertext while a {\bf substitution cipher} substitutes ciphertext for plaintext a bit, byte, letter, or a block of letters or bits at a time. Transposition and substitution ciphers are the foundation for modern symmetric ciphers.
+
+	\section{Steganography}
+
+        Steganography can be loosely categorized into two branches: visible and invisible. By {\em visible} steganography, we mean that the plaintext can be seen, but is obscured among other text or media. By {\em invisible} steganography, we mean that the plaintext is invisible to the unaided eye.
+
+		\subsection{Visible - Hidden in Plain Sight}
+
+\begin{problem}
+\label{prob-steg1} [10 points]
+Do some basic research on some method of visible steganography. It can be one of the methods below or something different. Specifically:
+\begin{enumerate}
+   \item describe how the steganographic method is used,
+   \item give at least a couple key historical facts about the method, and
+   \item give an example of the method in practice, if it is feasible.
+\end{enumerate}
+\end{problem}
+
+\begin{itemize}
+   \item{Equidistant Letter Sequences: Bible Codes}
+   \item{Anagrams}
+   \item{Grille Cipher}
+     %Girolamo Cardano (1550)
+   \item{Bacon's Cipher}
+   \item{Digital steganography}
+\end{itemize}
+
+		\subsection{Invisible}
+
+\begin{problem}
+\label{prob-steg2} [10 points]
+Do some basic research on some method of invisible steganography. It can be one of the methods below or something different. Specifically:
+\begin{enumerate}
+   \item describe how the steganographic method is used,
+   \item give at least a couple key historical facts about the method, and
+   \item give an example of the method in practice, if it is feasible.
+\end{enumerate}
+\end{problem}
+
+                \begin{itemize}
+				\item{Ancient ad-hoc techniques}
+				\item{Invisible ink}
+				\item{Microdots}
+				\item{Printer steganography}
+                \end{itemize}
+
+	\section{Transposition Ciphers}
+		We will not give transposition ciphers \index{transposition cipher} much attention, but they are included for historical purposes and also because the underlying concept, {\bf permutations}, \index{permutation} is an essential component of modern ciphers and hash functions. \index{hash function}
+
+		As noted above, a transposition cipher \index{transposition cipher} or {\bf permutation cipher} \index{permutation cipher} permutes the plaintext to obtain the ciphertext. The following are examples of classical transposition ciphers.
+
+		\begin{itemize}
+			\item Columnar Transposition
+			\item Double Columnar Transposition
+			\item Rail Fence Cipher
+			\item Route Cipher
+			\item Scytale
+		\end{itemize}
+
+\begin{problem}
+\label{prob:trans} [10 points]
+Do some basic research on one of the transposition ciphers above. Specifically:
+\begin{enumerate}
+   \item describe the cipher,
+   \item give at least one historical fact about the cipher, and
+   \item encrypt a message of your choice using one of the transposition ciphers above.
+\end{enumerate}
+\end{problem}
+
+\begin{problem} [15 points]
+Recover the plaintext from a peer's ciphertext, which was encrypted using a transposition cipher in Probem \ref{prob:trans}.
+\end{problem}
+
+	\paragraph*{Fractionation} The concept of {\bf fractionation} \index{fractionation} is to represent letters or other characters using a smaller set of symbols. This is akin to {\bf encoding}, \index{coding} in which letters are converted into other symbols for transmission. Morse Code is an example of encoding and in the digital age, computers must represent letters and symbols using a binary encoding, such as ASCII \index{ASCII} or UTF-8 \index{UTF-8}. The following are historical methods of fractionating plaintext so that a transposition cipher \index{transposition cipher} could easily break a letter apart.
+
+		\begin{itemize}
+			\item Polybius Square
+			\item Straddling checkerboard
+		\end{itemize}
+
+\begin{problem}
+\label{prob:frac} [10 points]
+Do some basic research on one of the fractionation methods above. Specifically:
+\begin{enumerate}
+   \item describe the method,
+   \item give at least one historical fact about the method, and
+   \item encode a message of your choice using one of the fractionation methods above.
+\end{enumerate}
+\end{problem}
+
+	\paragraph*{Fractionation and Transposition} The subtle distinction between fractionation and encoding is that the purpose of encoding is for direct transmission over a particular channel, while fractionation is employed for the purpose of further encryption. The following are some historical methods that combined fractionation and transposition. Many of these were very difficult to cryptanalyze in their day.
+
+		\begin{itemize}
+			\item ADFGX (\S2.6 of \cite{tw})
+			\item ADFGVX
+			\item Bifid
+			\item Trifid
+			\item VIC
+		\end{itemize}
+
+\begin{problem}
+\label{prob:fractrans} [10 points]
+Do some basic research on one of the ciphers above. Specifically:
+\begin{enumerate}
+   \item describe the cipher,
+   \item give at least one historical fact about the cipher, and
+   \item encrypt a message of your choice using one of the ciphers above.
+\end{enumerate}
+\end{problem}
+
+\begin{problem} [15 points]
+Recover the plaintext from a peer's ciphertext, which was encrypted using a cipher in Probem \ref{prob:fractrans}.
+\end{problem}
+
+		\subsection{Permutations}
+
+\begin{definition}
+A {\bf permutation} \index{permutation} of a set $S$ is a bijective (one-to-one and onto; or injective and surjective) function $\pi: S \to S$.
+\end{definition}
+
+\begin{example}
+\label{ex:perm}
+Let $S = \{1, 2, 3, 4, 5, 6\}$. One possible permutation, $\pi$, of $S$ is the following.
+$$\pi(1) = 5, \pi(2) = 3, \pi(3) = 6, \pi(4)=1, \pi(5)=2, \pi(6) = 4$$
+This can be written as an array, for convenience, with the input as the top row and the output as the bottom row.
+$$\pi = \left(
+\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6 \\
+5 & 3 & 6 & 1 & 2 & 4
+\end{array}
+ \right)$$
+From this representation, it is easy to see the inverse of $\pi$:
+$$\pi^{-1} = \left(
+\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6 \\
+4 & 5 & 2 & 6 & 1 & 3
+\end{array}
+ \right)$$
+\end{example}
+
+There is a much more convenient way to represent a permutation, namely as a product of disjoint {\bf cycles}. \index{cycle}
+
+\begin{example}
+Notice that in Example \ref{ex:perm}, $\pi$ maps $1 \mapsto 5 \mapsto 2 \mapsto 3 \mapsto 6 \mapsto 4 \mapsto 1$. We represent this series of mappings by the cycle $(1, 5, 2, 3, 6, 4)$, with the understanding that the last element of the cycle maps to the first.
+\end{example}
+
+We can now describe transposition ciphers as permutation ciphers.
+
+\begin{definition}
+Let $n\in\N$ and $S =\{1, 2, \cdots, n\}$. A {\em permutation cipher}  \index{permutation cipher} is a permutation $\pi:S\to S$ in which blocks of $n$ characters are considered and the location of character $i$ is moved to location $\pi(i)$ in the block, for all $1\le i\le n$. If $\pi$ is used to encrypt the plaintext, then $\pi^{-1}$ is used to recover the plaintext from the ciphertext.
+\end{definition}
+
+\begin{example}
+Suppose that we wanted to encrypt the six-letter message {\tt CIPHER} using the permutation $\pi$ in Example \ref{ex:perm}. The letter {\tt C} is in position 1, so it is moved to position 5, etc. So the ciphertext is {\tt HEIRCP}.
+\end{example}
+
+	\section{Mathematical Interlude: Modular Arithmetic}
+      \label{ssec:mod}
+
+	A fundamental concept to understand in cryptography, both classical and modern, is modular arithmetic. \index{modular arithmetic} Here is the notation and definition that we will be working from.
+
+\subsection{Definition and Notation}
+\label{sssec:mod-def}
+\begin{definition}
+Let $a, b\in\Z$ and $m\in\N$. We say that $a$ is {\bf congruent} \index{congruent} to $b$ {\bf modulo} \index{modulo} $m$, and write $a \equiv b \ppmod{m}$, if $m \mid (b-a)$. \index{mod}
+
+We say that we {\bf reduce} \index{reduce} an integer $a$ modulo $m$, written $a\ppmod{m}$, if we want the unique nonnegative integer $b\in\Z_m = \{0, 1, \ldots, m-1\}$ such that $a\equiv b\ppmod{m}$. In this case, we write $b = a\ppmod{m}$ or $a\ppmod{m}=b$.
+\end{definition}
+
+\begin{example}
+  $37 \equiv 11 \ppmod{26}$ because $37-11 = 26$ and $26\mid 26$.\\
+  $37 \equiv -15 \ppmod{26}$ because $37-(-15) = 52$ and $26\mid 52$.
+\end{example}
+
+\begin{definition}
+	When the modulus, $m\in\N$ is understood, let $a\oplus b = (a+b)\ppmod{m}$, for all $a, b\in\Z$. We will also extend this operator to vectors of integers modulo $m$, so that if $\veca, \vecb\in\Z^n$, with $\veca = \<a_1, a_2, \ldots, a_n\>$ and $\vecb = \<b_1, b_2, \ldots, b_n\>$, then $\veca \oplus\vecb = \<a_1\oplus b_1, a_2\oplus b_2, \ldots, a_n\oplus b_n\>$. In practice, $\veca$, $\vecb$, and $\veca\oplus\vecb$ will represent plaintext, a key stream, and the corresponding ciphertext.
+\end{definition}
+
+\begin{example}
+	Let the modulus $m = 26$.\\
+
+$4 \oplus 15 =19$
+
+$15 \oplus 15 = 30\ppmod{26} = 4$
+\end{example}
+
+\subsection{Basic Properties}
+
+In this section, we will prove various useful and important properties of modular arithmetic.
+
+\begin{theorem}
+\label{thm:mod-add}
+If $a, b, c, d\in \Z$, $m \in \N$, $a\equiv b \pmod{m}$, and $c \equiv d\ppmod{m}$, then $a+c \equiv b+d \ppmod{m}$.
+\end{theorem}
+
+\begin{theorem}
+\label{thm:mod-mult}
+If $a, b, c, d\in \Z$, $m \in \N$, $a\equiv b \pmod{m}$, and $c \equiv d\ppmod{m}$, then $ac \equiv bd \ppmod{m}$.
+\end{theorem}
+
+\begin{theorem}
+\label{thm:mod-constmult}
+If $a, b, c\in \Z$, $m \in \N$, and $a\equiv b \pmod{m}$, then $ac \equiv bc \ppmod{m}$.
+\end{theorem}
+
+\begin{theorem}
+\label{thm:mod-exp}
+If $a, b, n\in \Z$, $m \in \N$, and $a\equiv b \pmod{m}$, then $a^n \equiv b^n \ppmod{m}$.
+\end{theorem}
+
+\begin{problem} [10 points]
+Prove Theorem \ref{thm:mod-add}.
+\end{problem}
+
+\begin{problem} [10 points]
+Prove Theorem \ref{thm:mod-mult}.
+\end{problem}
+
+\begin{problem} [10 points]
+Prove Theorem \ref{thm:mod-constmult}.
+\end{problem}
+
+\begin{problem} [10 points]
+Prove Theorem \ref{thm:mod-exp}.
+\end{problem}
+
+	\subsection{Modular Inverses}
+
+\begin{definition}
+The number $1$ is called the {\bf multiplicative identity} because for all $a\in\Z$, $a\cdot 1 = 1\cdot a = a$. Likewise,  $a\cdot 1 = 1\cdot a \equiv a \ppmod{m}$ for all $m\in\Z$. If $b\in\Z$ such that $ab \equiv 1\ppmod{m}$, then $b$ is called an {\bf inverse} \index{inverse}\index{modular inverse} of $a$ modulo $m$ and we write $a^{-1}\equiv b \ppmod{m}$. If there exists some $b\in\Z_m$ such that $ab\equiv 1\ppmod{m}$, then $b$ is called the inverse of $a$ modulo $m$ and we write $b = a^{-1}\ppmod{m}$.
+\end{definition}
+
+\begin{example}
+	Since $2\cdot4 = 8\equiv 1\ppmod{7}$, $2^{-1}\ppmod{7} = 4$ and $4^{-1}\ppmod{7} = 2$.
+\end{example}
+
+\begin{problem} [10 points]
+Prove that if $a^{-1}\equiv b\ppmod{m}$, then $b^{-1}\equiv a\ppmod{m}$.
+\end{problem}
+
+\begin{problem} [10 points]
+	Let $m=5$. Find the inverse of each $a\in\Z_m$ if an inverse exists. How many elements of $\Z_m$ have inverses?
+\end{problem}
+
+\begin{problem} [10 points]
+	Let $m=30$. Find the inverse of each $a\in\Z_m$ if an inverse exists. How many elements of $\Z_m$ have inverses?
+\end{problem}
+
+\begin{problem} [10 points]
+Prove that if $a\in\Z$ and $m\in\N$ such that there exists some $b\in\Z$ such that $a^{-1}\equiv b\ppmod{m}$, then $b^{-1}\equiv a\ppmod{m}$.
+\end{problem}
+
+\begin{problem} [10 points]
+Under what conditions does an integer $a$ have an inverse modulo $m$?
+\end{problem}
+
+\begin{theorem}[Euclidean Algorithm]
+\label{thm:euclid}
+If $a, q, r\in\Z$, then $\gcd(a, aq+r)=\gcd(a,r)$.
+\end{theorem}
+
+\begin{problem} [15 points]
+Prove Theorem \ref{thm:euclid} and explain why it is the Euclidean Algorithm.
+\end{problem}
+
+\begin{problem}
+ [10 points]
+Apply the Euclidean Algorithm to compute $\gcd(30, 12)$.
+\end{problem}
+
+\begin{theorem}
+\label{thm:gcdlincomb}
+If $a,b\in\Z$, then there exist $x, y\in\Z$ such that $ax+by=\gcd(a,b)$.
+\end{theorem}
+
+\begin{problem} [15 points]
+Prove Theorem \ref{thm:gcdlincomb}.
+\end{problem}
+
+\begin{problem}
+\label{prob:ea} [10 points]
+Apply the Euclidean Algorithm to compute $\gcd(12, 17)$ and find $x, y\in\Z$ such that $12x+17y=\gcd(12, 17)$.
+\end{problem}
+
+\begin{problem} [10 points]
+As a follow up of Problem \ref{prob:ea}, determine $12^{-1}\ppmod{17}$, given the statement $12x+17y=\gcd(12, 17)$.
+\end{problem}
+
+\begin{problem} [10 points]
+Explain how to apply Theorems \ref{thm:euclid} and \ref{thm:gcdlincomb} to compute modular inverses in general.
+\end{problem}
+
+%	\section{Mathematical Interlude: Linear Algebra}
+ %     \label{ssec:linalg}
+
+
+
+
+	\section{Substitution Ciphers}
+	\label{ssec:sub}
+		In this and subsequent sections, it will be convenient to represent the set of 26 English letters mathematically. To this end, we define the following set.
+
+	\begin{definition} $\LL = \{\tt{A}, \tt{B}, \ldots, \tt{Z}\}$ \end{definition}
+
+It will also be convenient to assign each letter a number in order to work with these letters mathematically. To this end, we will associate each letter of $\LL$ with the integers $0$ through $25$.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\tt{A} & \tt{B} &\tt{C} & \tt{D} &\tt{E} & \tt{F} &\tt{G} & \tt{H} &\tt{I} & \tt{J} &\tt{K} & \tt{L} & \tt{M}\\
+\hline
+0 &1 & 2& 3& 4&5&6&7&8&9&10&11&12\\
+\hline
+\hline
+\tt{N} & \tt{O} &\tt{P} & \tt{Q} &\tt{R} & \tt{S} &\tt{T} & \tt{U} &\tt{V} & \tt{W} &\tt{X} & \tt{Y} & \tt{Z}\\
+\hline
+13 &14 & 15& 16& 17&18&19&20&21&22&23&24&25\\
+\hline
+\end{tabular}
+\end{center}
+\caption{English letters and their corresponding shifts}
+\label{table:lnums}
+\end{table}
+
+		\subsection{Monoalphabetic Ciphers}
+			\paragraph*{Shift Ciphers and Caesar's Cipher} Read the introduction to Chapter 2 and \S 2.1 of \cite {tw}.
+
+			\paragraph*{Affine Ciphers} Read \S 2.2 of \cite {tw}.
+
+\begin{problem} [10 points]
+Show that any shift cipher is an affine cipher.
+\end{problem}
+
+			\paragraph*{Atbash} Atbash \index{Atbash} is possibly the oldest substitution cipher and was created by the ancient Hebrews. The name ``Atbash" (``ATBaSh'') is the key to the cryptosystem: the first and last letters are substituted for each other (Aleph (A) and Tav (T)), the second and second to last letters are substituted for each other (Bayt (B) and Sheen (Sh)), and so on. The equivalent in English would be to switch {\tt A} and {\tt Z}, {\tt B} and {\tt Y}, and so on. We could call this ``Azby." The Hebrew prophet Jeremiah used Atbash a few times to conceal the fact that he was prophesying doom against the Babylonian Empire from everyone except his Hebrew readers in Jeremiah 25:26, 51:1, and 51:41.
+
+
+\begin{problem} [10 points]
+Show that Atbash and Azby are examples of affine ciphers.
+\end{problem}
+
+				%Jer. 51:1 (Kasdim (Chaldeans) -> Lev Kamai) and 25:26, 51:41 (Babel (Babylon) -> Sheshakh)
+
+			\paragraph*{Full Generalization} Each of the previous ciphers, shift ciphers, Caesar's cipher, affine ciphers, and Atbash, are all examples of a broader category of monoalphabetic substitution ciphers \index{monoalphabetic substitution cipher}.
+
+	\begin{definition}
+		Let $\pi:\LL\to\LL$ be a permutation of the set $\LL$ of English letters. A {\bf monoalphabetic substitution cipher} is a cipher in which each plaintext letter, $p\in\LL$ is mapped to a ciphertext letter $c = \pi(p)$.
+	\end{definition}
+
+		\paragraph*{Cryptanalysis of Monoalphabetic Ciphers}
+
+\begin{problem}
+\label{prob-freq} [5 points]
+Referring to Table 2.1 in \cite{tw}, list the letters of the alphabet in descending order in terms of their occurrence in English.
+\end{problem}
+
+\begin{problem} [10 points]
+\S 2.13 Exercise \#2
+\end{problem}
+
+\begin{problem} [10 points]
+\S 2.13 Exercise \#3
+\end{problem}
+
+\begin{problem} [10 points]
+\S 2.13 Exercise \#5
+\end{problem}
+
+\begin{problem} [15 points]
+\S 2.13 Exercise \#6
+\end{problem}
+
+\begin{problem} [15 points]
+\S 2.13 Exercise \#7
+\end{problem}
+
+\begin{problem} [15 points]
+Suppose that you encrypt a message using two different affine ciphers with two different moduli, $m_1$ and $m_2$. Is there any advantage to doing this instead of using a single affine cipher?
+\end{problem}
+
+\begin{problem} [10 points]
+Aside from using the frequency of English letters, what other structural elements of the English language can be used to crack messages encrypted with a monoalphabetic cipher?
+\end{problem}
+
+\begin{problem} [10 points]
+\S 2.14 Computer Problem \#1
+\end{problem}
+
+\begin{problem} [10 points]
+\S 2.14 Computer Problem \#2
+\end{problem}
+
+\begin{problem} [10 points]
+\S 2.14 Computer Problem \#3
+\end{problem}
+
+\begin{problem} [10 points]
+\S 2.14 Computer Problem \#4
+\end{problem}
+
+
+
+		\subsection{Polyalphabetic Ciphers}
+
+			\paragraph*{Vigen\`{e}re's Cipher}
+                        To make things more difficult, the French cryptographer Blaise de Vigen\'{e}re used a multi-letter key in 1586. Today, we call his cipher {\bf Vigen\`{e}re's cipher}, \index{Vigen\`{e}re's cipher} but he called it {\em Le Chiffre Ind\'echiffrable}, which means ``the indecipherable cipher.'' Sure, Vigen\`{e}re's cipher is more difficult to crack than the most basic substitution ciphers, but guess what. It can be cracked.
+
+                        Read \S 2.3 in \cite{tw}.
+
+A table, called a {\bf tabula recta}\index{tabula recta} to aid in encrypting, decrypting, and cryptanalysis with Vigen\`ere's Cipher can be found in Appendix \ref{app:tabularecta}.
+
+\begin{problem}
+\label{prob-vig-enc} [10 points]
+Encrypt a plaintext of your choice with at least 100 characters using a key with 3-10 characters. The rest of the class will be challenged later to cryptanalyze the ciphertext.
+\end{problem}
+
+	\paragraph*{Cryptanalysis of Vigen\`{e}re's Cipher}
+
+                Charles Babbage \index{Babbage, Charles} and Friedrich Wilhelm Kasiski \index{Kasiski, Friedrich} were the first to cryptanalyze Vigen\`{e}re's cipher \index{Vigen\`{e}re's cipher} \cite{singh}. Babbage cryptanalyzed a ciphertext encrypted by John Thwaites after being challenged around 1854, but never published his results. Kasiski independently discovered a similar attack and published it in 1863. In 1920, William Friedman \index{Friedman, William} developed additional probabilistic techniques to determine the key length, called the {\bf Friedman test} or the {\bf kappa test}, using the {\bf index of coincidence}. The common element of each cryptanalytic technique is to first determine the length of the key. Once the key length has been determined, the key itself can be recovered using techniques similar to those that we saw with shift ciphers.
+
+                Read \S 2.3.1, 2.3.2, and 2.3.3.
+
+\begin{problem}
+\label{prob-vig-dec1} [15 points]
+Recover the plaintext a key from a peer's ciphertext, which was encrypted using Vigen\`{e}re's Cipher in Problem \ref{prob-vig-enc}. Explain your approach.
+\end{problem}
+
+\begin{problem}
+\label{prob-vig-dec2} [20 points]
+Recover the plaintext and key from the following ciphertext, which was encrypted using Vigen\`{e}re's Cipher. Explain your approach. [Note: The message is a Confederate letter written on September 14, 1862.]
+\end{problem}
+{\tt
+\noindent UHP XVQAP VBPTWTK QFRDEY- MZMHZRH AE EWGWJZJLWX IZR TSWIY- ZBAB. KLFY LKM OCEJJDPGB AT \\
+\\
+JSPN NKCEVZRH MJ YWDQV LFRP BB UGZQ QOCMIZH FYS CZFUGBZ GBTTHV IWKL FANA WFVVV THZNTP  PV \\
+\\
+OFPE HXQB Z WIAWE XDSJIOT L UWXR WVPNE BV AFUIS TZ WMOSZZF TSX MZSDC BS WHVS OJ TPSDBJXS\\
+\\
+ RRE WSXV OCDTFLWXL U GYEML QTTX PRGL UAHV KCL. QBR DAIXZ ZW TTTET ROI FFHTGL. QYJ
+ }
+
+
+\begin{problem}  [15 points]
+\S 2.14 Computer Problem \#7
+\end{problem}
+
+\begin{problem}  [15 points]
+\S 2.14 Computer Problem \#8
+\end{problem}
+
+\begin{problem}  [15 points]
+\S 2.14 Computer Problem \#9
+\end{problem}
+
+			\paragraph*{Running Key Cipher / ``Book Cipher"}
+
+                 So any substitution cipher with a relatively short key can be cracked and is insecure. To make things more difficult, someone had the idea to use text from a book as the key. The key is as long as the plaintext and nothing is repeated. In practice, the key would typically be taken from a popular book that the sender and receiver both had in their possession. Thus the key to the key (Should we call it a {\bf metakey}?) would be the book and the starting page, chapter, or section of the book. While this is often called a ``Book cipher," a book cipher is somewhat different; it is called the {\bf running key cipher} \index{running key cipher} because the key runs through a passage of some text without repeating. Here is an example.
+
+\begin{example}
+We will encrypt the message ``Running key" with the key beginning with \S 2.3 of \cite {tw}: ``A variation of the shift cipher was invented ...." The middle column will be elements of $\LL$ and the right column will be the corresponding numbers given by Table \ref{table:lnums}.
+
+\begin{center}
+\noindent\begin{tabular}{lccrrrrrrrrrr}
+					& {\bf Letters} & \multicolumn{10}{c}{{\bf Corresponding Numbers}}\\
+\hline
+{\bf Plaintext:} 	& {\tt RUNNINGKEY} & 17 & 20 & 13 & 13 & 8 & 13 & 6 & 10 & 4 & 24\\
+{\bf Key:}			& {\tt AVARIATION} 	&  0 & 21 &   0 & 17 & 8 & 0 & 19 & 8 & 14 & 13 \\
+{\bf Ciphertext:}	& {\tt RPNEQNZSSL} & 17 & 15 & 13 & 4 & 16 & 13 & 25 & 18 & 18 & 11\\
+\end{tabular}
+\end{center}
+\end{example}
+
+Recall that a tabula recta\index{tabula recta} to aid in encrypting, decrypting, and cryptanalysis with the Running Key Cipher can be found in Appendix \ref{app:tabularecta}.
+
+\begin{problem}
+\label{prob:book-enc} [10 points]
+Encrypt a plaintext of your choice with at least 100 characters using a key from a book of your choice. The rest of the class will be challenged later to cryptanalyze the ciphertext.
+\end{problem}
+
+	\paragraph*{Cryptanalysis of the Running Key Cipher}
+
+The Running key cipher is more difficult to cryptanalyze, but it can be cracked by applying the same probabilistic tools that we have used for other substitution ciphers. Friedman published a method to attack the running key cipher in 1918 \cite{kahn, schneier}. The following problems give us some ideas behind an approach.
+
+\begin{problem}  [5 points]
+If you are analyzing a ciphertext encrypted with the running key cipher, and you have determined that the plaintext or keystream begins with {\tt FOURSCO}, what letters are likely to follow these?
+\end{problem}
+
+\begin{problem}  [5 points]
+If you are analyzing a ciphertext encrypted with the running key cipher, and you have determined that the plaintext or keystream begins with {\tt WECHOO}, what letters are likely to follow these?
+\end{problem}
+
+\begin{problem}  [5 points]
+If you are analyzing a ciphertext encrypted with the running key cipher, and you have determined that the plaintext or keystream begins with {\tt THI}, what letters are likely to follow these?
+\end{problem}
+
+\begin{problem}  [10 points]
+If a running key ciphertext begins with the letter {\tt T}, what are the most likely and least likely plaintext / key stream pairs that resulted in that ciphertext?
+\end{problem}
+
+\begin{problem}  [10 points]
+If a running key ciphertext begins with the letters {\tt TU}, what are some likely and unlikely plaintext / key stream pairs that resulted in that ciphertext?
+\end{problem}
+
+\begin{problem}  [10 points]
+If a running key ciphertext begins with the letters {\tt MOI}, what are some likely and unlikely plaintext / key stream pairs that resulted in that ciphertext?
+\end{problem}
+
+\begin{problem}  [20 points]
+Recover the plaintext from the following ciphertext, which was encrypted using the running key cipher.
+
+\noindent{\tt EVSYO IAQZH DNHOS WTEKI QWJSD KTQDG RUTTD YTCNS FFQUT LLCBJ}
+\end{problem}
+
+\begin{problem}  [15 points]
+Recover the plaintext from a peer's ciphertext, which was encrypted using the Running Key Cipher in Problem \ref{prob:book-enc}.
+\end{problem}
+
+	\paragraph*{Discussion} What are some strengths and weaknesses of the Running Key Cipher? What could make it stronger?
+
+			%\paragraph*{Matrix Multiplication and Inversion}
+
+			%\paragraph*{Hill Cipher}
+
+			\paragraph*{One-Time Pad / Vernam Cipher}
+
+In order to circumvent the known attacks on Vigen\`{e}re's cipher, Frank Miller, \index{Miller, Frank} a banker from Sacramento, CA, invented what later became called the {\bf one-time pad} \index{one-time pad} encryption method in 1882 \cite{bellovin}. In 1917, Gilbert Vernam, \index{Vernam, Gilbert} an engineer at AT\&T Bell Labs, applied a similar procedure, with two major differences being that encryption and decryption were performed in binary and that the key was repeated. Vernam received a patent for his techniques in 1919. Around 1918, United States Army officer Joseph Mauborgne, \index{Mauborgne, Joseph} realized that if Vernam's key was perfectly random and was never repeated, that one could in fact have perfect security. This fact was formally proven independently by Claude Shannon, known as the father of information theory, by 1945 and by Shannon's Soviet counterpart Vladimir Kotelnikov in 1941. To summarize, we formally define the one-time pad.
+
+\begin{definition}
+Let $1<m\in\N$ be a modulus and $n\in\N$ the length of a plaintext message $M$. Thus, $M \in \Z_m^n$. Let $K\in\Z_m^n$ be a keystream such that each element of $K$ is chosen randomly. $K$ is called a {\bf one-time pad} if it is never repeated or reused. The component-wise addition of $K$ and $M$, modulo $m$ to produce a ciphertext $C\in\Z_m^n$ is called the {\bf one-time pad encryption method}. In other words, $C = M\oplus K$.
+\end{definition}
+
+Thus, the two critical components of this method are that:
+\begin{enumerate}
+	\item the keystream is perfectly random and
+	\item the keystream is never repeated for a subsequent encryption.
+\end{enumerate}
+
+In fact, the one-time pad encryption method is the only known encryption algorithm with perfect security.
+
+\begin{theorem}[Kotelnikov and Shannon]
+The one-time pad encryption method allows for perfect security. That is, it cannot be cracked.
+\end{theorem}
+
+\paragraph*{Discussion} What are some of the advantages and disadvantages, possibilities and difficulties of using the one-time pad?
+
+Originally, one-time pads were lists of random letters, but in the digital age, we often use a {\bf stream} of {\bf bits} or {\bf bytes}. A {\bf bit} \index{bit} is an integer in the set $\{0, 1\}$ and a stream of bits is often denoted $\{0, 1\}^*$. We will denote the set of bits interchangeably as $\Z_2$ and $\F_2$ and a bit stream \index{stream} of length $n$ by $\Z_2^n$ or $\F_2^n$. A {\bf byte} \index{byte} is a string of 8 bits. A byte can be represented as an element of $\Z_{256}$ or as a string of two {\bf hexadecimal} (i.e. base 16) digits.
+
+
+\begin{problem}  [10 points]
+Let $M_1, M_2\in\{0,1\}^*$ be two plaintext messages and let $K\in\{0,1\}^*$ be a keystream of bits. Let $C_1 = M_1\oplus K$ and $C_2 = M_2\oplus K$. Explain why security is compromised when the key $K$ is used for both ciphertexts.
+\end{problem}
+
+\begin{problem}  [10 points]
+Explain in your own words why you think that the one-time pad cannot be cracked.
+\end{problem}
+
+\paragraph*{Discussion} What are some sources of random data (letters, bits, bytes, numbers, etc.)?
+
+\begin{problem}[15 points]
+Describe the Solitaire (or Pontifex) cryptosystem. What can be said about its security?
+\end{problem}
+
+\begin{problem}[15 points]
+Can you extend or improve upon the concept of the Solitaire (or Pontifex) cryptosystem?
+\end{problem}
+
+\begin{problem} [10 points]
+Explore a topic that came out of a class discussion or solve a problem inspired by the content of this chapter.
+\end{problem}

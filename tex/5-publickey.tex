@@ -1,0 +1,264 @@
+\chapter{Public-Key Cryptography}
+\label{ch:pkc}
+	\section{The Concept}
+
+	Read \S 6.7 of \cite{tw}.
+
+The concept of Diffie-Hellman Key Exchange can be understood even by elementary school children with an activity called ``Chocolate key cryptography," using M\&Ms \cite{mandm}.
+
+% Activity - Chocolate Key Cryptography
+%Set-up: Two empty cans with plastic lids. Each can represents an encryption/decryption key.
+%Cut a pair of crossed slits about 1/2 inch long in each lid.
+%``Alice" and ``Bob" each get a can.
+%``Alice" and ``Bob" put as many M&M's of whatever color as they want into their respective cans.
+%Nobody in possession of a can is allowed to open the can, but can ``copy" the can.
+%``Alice" and ``Bob" give their can to each other and each put their identical M&Ms into the can.
+%Now Alice and Bob's cans contain the same number and color of M&Ms.
+
+
+	\section{Diffie-Hellman-(Merkle) Key Exchange}
+
+Read \S 7.4 of \cite{tw}.
+
+\begin{problem}[15 points]
+	Describe how to extend the Diffie-Hellman Key Exchange for three people to share a common secret key.
+\end{problem}
+
+\begin{problem}[15 points]
+	Describe how to extend the Diffie-Hellman Key Exchange for $n$ people to share a common secret key.
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 7.6 \#10 of \cite {tw}
+\end{problem}
+
+	\section{Kid Krypto}
+
+	Kid Krypto \index{Kid Krypto} is a warm-up to the RSA public-key cryptosystem. Many of the concepts are identical, but the mathematics of Kid Krypto is a little more basic.
+
+If Bobby would like to receive a secret message from his friends, he first chooses any four positive integers that only he will know: $a, b, A$, and $B$. Then he computes
+\begin{align*}
+M &= ab-1 \\
+e &= AM+a \\
+d &= BM+b \\
+n &= \frac{ed-1}{M}
+\end{align*}
+Bobby tells everyone the numbers $e$ (for encryption) and $n$. To send a plaintext message $m\in\Z_n$, the sender computes
+$$ c = em \ppmod n \enspace .$$
+To decipher the ciphertext $c$, Bobby computes
+$$ dc \ppmod{n} \enspace .$$
+
+\begin{problem}  [10 points]
+Let $a = 47$, $b = 22$, $A=11$, and $B=5$. Compute $M, e, d,$ and $n$.
+	\begin{enumerate}
+		\item Encode the plaintext message $m = 2020$ using $e$ and $n$ above. (Check that $dc \ppmod{n} = m$.)
+%16414
+		\item Decode the encrypted message $c = 43155$. (Check that $em \ppmod{n} = c$.)
+%1234
+	\end{enumerate}
+\end{problem}
+\begin{problem}
+\label{prob:kk}  [10 points]
+Bobby announces his public key: $n = 17239722505$, $e = 25540219$. Alice sends him the encrypted message $c = 7218695996$. What is Alice's message?
+%314159
+\end{problem}
+
+\begin{problem}   [10 points]
+Explain why Kid Krypto works; that is, how do you know that $m = dc \ppmod{n}$?
+\end{problem}
+\begin{problem}  [10 points]
+Is Kid Krypto secure? Discuss its strengths and weaknesses.
+\end{problem}
+
+\begin{problem}  [10 points]
+Using the same values of $n$ and $e$ from Problem \ref{prob:kk}, decode the value of $m$ from the intercepted message $c =6599969821$. The number you've found is not just a randomly chosen number. It corresponds to an English word or phrase. What is the word and how is it derived from $m$?
+\end{problem}
+	\section{RSA}
+
+Read \S 6.1 (6.2 is optional) of \cite {tw}.
+
+\begin{problem}[10 points]
+	\S 6.8 \#1 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.8 \#2 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.8 \#3 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.8 \#4 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.8 \#5 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.8 \#6 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 6.8 \#7 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.8 \#8 of \cite {tw}
+\end{problem}
+
+\begin{problem}[20 points]
+	\S 6.8 \#9 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 6.8 \#11 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 6.8 \#16 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.8 \#17 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 6.8 \#19 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.8 \#22 of \cite {tw}
+\end{problem}
+
+\begin{problem}[5 points]
+	\S 6.9 \#1 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.9 \#2 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.9 \#3 of \cite {tw}
+\end{problem}
+
+\begin{problem}[20 points]
+	\S 7.6 \#12 of \cite {tw}
+\end{problem}
+
+	\section{ElGamal}
+
+	Read \S 7.5 of \cite{tw}.
+
+\begin{problem}[10 points]
+	\S 7.6 \#11 of \cite {tw}
+\end{problem}
+
+	\section{Elliptic Curve Cryptography}
+
+	There are special groups arising from curves called {\bf elliptic curves}\index{elliptic curve} that are ubiquitous in cryptography today. An understanding of group theory and finite fields will facilitate understanding these objects more fully and will allow for problems to be solved much more easily.
+
+	Read Chapter 16 of \cite{tw}.
+
+\begin{problem}[15 points]
+	\S 16.7 \#2 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 16.7 \#3 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 16.7 \#4 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 16.7 \#5 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.7 \#6 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.7 \#7 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 16.7 \#8 of \cite {tw}
+\end{problem}
+
+\begin{problem}[20 points]
+	\S 16.7 \#9 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 16.7 \#10 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.7 \#11 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.7 \#12 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.7 \#13 of \cite {tw}
+\end{problem}
+
+\begin{problem}[20 points]
+	\S 16.7 \#14 of \cite {tw}
+\end{problem}
+
+\begin{problem}[20 points]
+	\S 16.7 \#15 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.7 \#16 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.7 \#17 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.7 \#18 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.7 \#19 of \cite {tw}
+\end{problem}
+
+\begin{problem}[20 points]
+	\S 16.7 \#20 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.8 \#1 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 16.8 \#2 of \cite {tw}
+\end{problem}
+
+\begin{problem}[20 points]
+	\S 16.8 \#3 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 16.8 \#4 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 16.8 \#5 of \cite {tw}
+\end{problem}
+
+\begin{problem}[20 points]
+	Give the mathematical details of Curve25519 and explain the difference in the representation of this curve from the standard Weierstrass form of an elliptic curve. Who created the curve, what were the design considerations, and why is this curve used in so many applications today?
+\end{problem}

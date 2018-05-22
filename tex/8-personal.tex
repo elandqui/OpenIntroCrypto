@@ -1,0 +1,88 @@
+\chapter{Personal Encryption Software}
+\label{ch:personal}
+
+	\begin{itemize}
+		\item Data encryption: Encrypt individual files, directories, and in some cases, whole drives.
+		\begin{itemize}
+			\item {\bf PGP} (Pretty Good Privacy) {\tt pgp.com} This is the original software package for personal data encryption, email encryption, and digital signatures, etc. It was created by Phil Zimmerman in 1991. Currently, Symantec distributes the original PGP software as part of their encryption software suite. PGP was the inspiration for the OpenPGP standard for data encryption.
+			\item {\bf GPG, Gnu PG} (Gnu Privacy Gard) {\tt https://gnupg.org/} GPG is an open source alternative of PGP and is developed based on the OpenPGP standard to be interoperable with PGP and other OpenPGP-compliant systems.
+			\item {\bf Gpg4win} {\tt http://www.gpg4win.org/} Gpg4win is an open-source email and file encryption package for Windows built on GPG.
+		\end{itemize}
+		\item Full Disk Encryption: Encrypt an entire drive on your computer. There are several proprietary and open-source packages available for any major operating system. See {\tt https://en.wikipedia.org/wiki/Comparison\_of\_disk\_encryption\_software} for a comparison.
+		\begin{itemize}
+			\item {\bf BestCrypt} {\tt www.jettico.com} works with Windows, Mac, Linux, and Android and is one of the oldest disk encryption software packages available.
+			\item {\bf Bitlocker} {\tt http://windows.microsoft.com/en-US/windows7/products/features/bitlocker} Bitlocker comes standard with certain versions of Windows Vista and later versions.
+			\item {\bf FileVault} and {\bf FileVault 2} comes standard with Mac OS X Panther (10.3) and later and Lion (10.7) and later, respectively.
+			\item {\bf VeraCrypt} {\tt https://veracrypt.codeplex.com/} is a freeware fork of TrueCrypt and was developed by the French Cryptography group IDRIX.
+		\end{itemize}
+		\item Email encryption packages, servers, and plugins, with digital signatures:
+		\begin{itemize}
+			\item {\bf Enigmail} {\tt https://enigmail.net/home/index.php} Plugin for Thunderbird based on OpenPGP.
+			\item {\bf GPG, GPGMail, Gpg4win} {\tt https://gpgtools.org/}
+			\item {\bf Mailvelope} {\tt https://www.mailvelope.com/} Mailvelope is a user-friendly and open-source webmail email encryption package that can also be downloaded as an add-on for Chrome and Firefox.
+			\item {\bf PGP}
+			\item {\bf ProtonMail} {\tt https://protonmail.ch/} Swiss-based (out of US and EU jurisdictions) encrypted webmail developed by CERN researchers.
+			\item {\bf RetroShare}
+		\end{itemize}
+		\item Anonymous and secure internet browsing, networking, file transfers, and VPNs.
+		\begin{itemize}
+			\item {\bf Astoria} {\tt http://nrg.cs.stonybrook.edu/astoria-as-aware-relay-selection-for-tor/} Astoria is a Tor client that circumvents attacks on anonymity on the Tor internet browsing network. Source code is forthcoming.
+			\item {\bf I2P} {\tt https://geti2p.net/en/} I2P (Invisible Internet Project) is similar to Tor and RetroShare (See below), but is based on the garlic routing concept to improve on the onion routing concept employed by Tor.
+			\item {\bf Let's Encrypt} {\tt https://letsencrypt.org/} From a Slashdot article, dated June 17, 2015, ``Let's Encrypt will provide free-of-charge SSL and TSL certificates to any webmaster interested in implementing HTTPS for their products."
+			\item {\bf OpenSSH} {\tt http://www.openssh.com} OpenSSH is an open-source alternative to SSH and allows users to log into a remote server securely and transfer files securely (via sftp).
+			\item {\bf OpenVPN} {\tt openvpn.net} OpenVPN is an open-source virtual private network (VPN)
+			\item {\bf RetroShare} {\tt http://retroshare.sourceforge.net/} This is an all-encompassing open-source package allowing for secure chatting, calling, video, mail, file-sharing, social media, and internet browsing
+			\item {\bf SecureDrop} {\tt https://securedrop.org} SecureDrop is an anonymous-tip / whistle-blower submission system for people to send information to news outlets without revealing their identity.
+			\item {\bf Tor, Tor Browser} (The Onion Router) {\tt https://www.torproject.org/} From their website, ``Tor prevents people from learning your location or browsing habits. Tor is for web browsers, instant messaging clients, and more. Tor is free and open source for Windows, Mac, Linux/Unix, and Android." and ``Tor Browser contains everything you need to safely browse the Internet."
+		\end{itemize}
+		\item Instant Messaging and Off-the-Record Messaging {\tt https://otr.cypherpunks.ca/} Off-the-Record Messaging, or OTR, is a protocol for secure instant messaging applications. There are several other chat programs that utilize the OTR protocol. See  ({\tt https://en.wikipedia.org/wiki/Off-the-Record\_Messaging}) for a list of most such programs. Here are a couple.
+		\begin{itemize}
+			\item {\bf Pidgin} ({\tt http://pidgin.im/}) allows OTR as a plug-in.
+			\item {\bf Kopete} ({\tt https://userbase.kde.org/Kopete}) has OTR built-in.
+			\item {\bf RetroShare}
+			\item {\bf Tox} {\tt https://tox.im} Tox is an open-source and secure instant-messaging and video-calling software package. Technically, Tox is the core functionality that another graphical user interface (GUI) will interact with. There are several GUIs that allow Tox to be run on any major operating system.
+			\item {\bf What's App?"} What's App is a texting application with end-to-end encryption.
+		\end{itemize}
+		\item Intenet phones and video phones.
+		\begin{itemize}
+			\item {\bf RetroShare}
+			\item {\bf Tox}
+			\item {\bf What's App?}
+		\end{itemize}
+		\item Operating systems and cryptographic file systems
+		\begin{itemize}
+			\item {\bf eCryptfs} (Linux)
+			\item {\bf Ext4} (Linux)
+			\item {\bf NTFS with EFS} (Windows)
+			\item {\bf Tails} (The Amnesic Incognito Live System) {\tt https://tails.boum.org/} From their website: ``Tails is a live operating system, that you can start on almost any computer from a DVD, USB stick, or SD card. It aims at preserving your privacy and anonymity" by forcing you to use encryption for all relevant applications. It is built upon Debian Linux.
+			\item {\bf Qubes} {\tt https://www.qubes-os.org} ``A reasonably secure operating system."
+		\end{itemize}
+		\item Cryptocurrencies. The enigmatic group or individual known as Satoshi Nakamoto \index{Satoshi Nakamoto} revolutionized the digital currency paradigm in 2009 by creating Bitcoin, \index{Bitcoin} the first decentralized cryptocurrency. Bitcoin was perhaps inspired by ideas posted by Wei Dai (b-money) and Nick Szabo (bit gold) on their websites in 1998 and 2005, respectively. The following is a list of some of the more prominent cryptocurrencies (out of many hundreds that have been created). Most cryptocurrencies are based on Bitcoin's ``block chain" concept to ``mine" new coins and verify transactions. In each case, cryptographic protocols secure transactions, mining, anonymity (at least partially), digital wallets, and decentralization.
+		\begin{itemize}
+			\item {\bf Bitcoin} {\tt https://bitcoin.org/en/} (BTC, 2009)
+			\item {\bf Dash} {\tt  https://www.dashpay.io/} (DASH, 2014) Dash was originally named XCoin, then its name was changed to Darkcoin, and finally Dash. Dash was created to add anonymity to Bitcoin.
+			\item {\bf Dogecoin} {\tt  http://dogecoin.com/} (DOGE, 2013) This is one of the more popular cryptocurrencies solely because it is named after an internet meme.
+			\item {\bf Litecoin} {\tt  https://litecoin.org/} (LTC, 2011) Litecoin was an early fork of Bitcoin.
+			\item {\bf Namecoin} {\tt  http://namecoin.info/} (NMC, 2011) Namecoin was the first fork of Bitcoin and functions as an alternative decentralized DNS (domain name system).
+			\item {\bf Nxt} {\tt http://nxt.org/} (NXT, 2013) Nxt was designed to have financial applications and services built upon it (via coin ``coloring"), for example, allowing one to prove possession of intellectual property or copyrights, transfer stocks, bonds, property, commodities, etc.
+			\item {\bf Primecoin} {\tt http://primecoin.io/}  (XPM, 2013)  Primecoin is based on the mathematical difficulty of finding chains of prime numbers, the first cryptocurrency to be based on a problem in scientific computing.
+			\item {\bf Ripple} {\tt  https://ripple.com/} (XRP, 2013) Ripple began in 2004 with the development of a global network that allowed users to create a decentralized currency and make secure transactions. With the creation of Bitcoin, this concept was extended.
+			\item {\bf RSCoin} I knew it was bound to happen. The central bank of the U.K., the Bank of England, commissioned two researchers at University College London to devise a centralized cryptocurrency framework based on the blockchain concept.
+			\item {\bf Zerocoin} {\tt  http://zerocoin.org/} Zerocoin is a proposed cryptocurrency that allows for more anonymity in a transaction.
+		\end{itemize}
+	\item Educational software
+	\begin{itemize}
+		\item CrypTool {\tt https://www.cryptool.org/en/}
+	\end{itemize}
+	\end{itemize}
+
+\begin{problem}  [20 points]
+	Do some basic research on one or more of the personal encryption software products listed above, or any other personal encryption product. You may choose any software that we haven't already seen how to install and use in class.
+	\begin{enumerate}
+		\item Describe the main use(s) of the product.
+		\item State what operating system(s) or device(s) the software runs on.
+		\item Describe the underlying cryptographic protocols and algorithms that the product uses.
+		\item If possible, make some comments on the claimed or proven security of the product.
+		\item Describe how to install and use the software. (This may require you to actually install and use the product.)
+	\end{enumerate}
+\end{problem}

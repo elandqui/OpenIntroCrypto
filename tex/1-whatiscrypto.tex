@@ -1,0 +1,117 @@
+\chapter{What is Cryptography?}
+
+The history and study of cryptography begins with a need or desire for privacy. We begin by posing a question that is easy to understand, but which will take months to begin to unpack.
+
+\paragraph*{The Problem:} How does Alice send Bob a message so that only Bob can read the message?
+
+	The history of cryptography is the history of solving problems of information security. Throughout human history, individuals and organizations have sought to conceal communications from all but the intended recipient. In recent decades, more complex problems of secrecy and privacy have arisen. Motivated by these needs, governments, militaries, corporations, academic institutions, and individuals have proposed various solutions. The future will certainly bring new problems and questions that will require a combination of existing knowledge and technology with creative ideas and breakthroughs in order to solve them. The material of the course will serve to partially equip you to utilize current technology and developing your problem-solving mindset will prepare you to develop new technology. Indeed, cryptography is a discipline of problem-solving. Mathematics as a whole is all about problem-solving. All of science and even every profession is motivated by problem-solving.
+
+	\section{Problem-Solving}
+
+In light of this, it will help us to understand the problem-solving process. In his famous book {\em How to Solve It}, mathematician George P\'{o}lya \index{George P\'{o}lya} described his problem-solving process in four steps.
+\begin{enumerate}
+	\item Understand the problem.
+	\item Devise a plan and identify the tools that could apply to the problem.
+	\item Execute the plan and come up with a solution.
+	\item Finally, check the solution to see if it makes sense, solves the problem, if there are any weaknesses in the solution, and if the problem and solution could be extended or generalized.
+\end{enumerate}
+In this course, it will help to be of the same mindset as you work through each problem, no matter how small or great it is. To facilitate describing the problems in this course, we will introduce some common terminology.
+
+		\section{Foundational Terminology}
+
+	{\bf Cryptography} \index{cryptography} comes from the Greek words $\kappa\rho\upsilon\pi\tau o\varsigma$ ({\em kryptos}), meaning ``hidden," and $\gamma\rho\alpha\varphi\epsilon\iota\nu$ ({\em graphein}), meaning ``writing," and is the study of devising schemes to secure information. Informally, it is used interchangeably with {\bf cryptology}, \index{cryptology} from the Greek word $\lambda o\gamma\iota\alpha$ ({\em -logia}), meaning ``study." Technically, though, cryptology combines the study of securing information as well as {\bf cryptanalysis}, \index{cryptanalysis} the study of analyzing cryptographic schemes in order to discover flaws or insecurities. Informally, you can think of cryptographers as ``code writers" and cryptanalysts as ``code breakers."
+
+	A {\bf cryptosystem} \index{cryptosystem} is a scheme or set of methods intended to secure information. In the most basic application in which a message is to be sent securely from one person, Alice, to another, Bob, a cryptosystem will have two functions or algorithms: one function to {\bf encrypt}, or secure, the message and another function to {\bf decrypt} the encrypted message and thus reveal the original message. Such a cryptosystem is called a {\bf cipher}. \index{cipher} The message is often called the {\bf plaintext} \index{plaintext} and an encrypted message is often called the {\bf ciphertext}. \index{ciphertext} Encryption functions generally take two arguments: a message and a {\bf key}. \index{key} Different keys will produce different ciphertexts. When the key is a very long list of letters or numbers, it is often called a {\bf keystream}. \index{keystream} If a cryptosystem uses the same key to encrypt and decrypt, then it is called a {\bf symmetric} cipher. \index{symmetric cipher} A symmetric cipher is also called a {\bf private-key} cryptosystem because anyone with the key that was used to encrypt a message will be able to decrypt the ciphertext; the key must be kept private by both the sender and receiver.
+
+	\section{Overview}
+
+ In this course, we will begin by learning about some of the first ciphers ever used in Section \ref{ch:classical}. Before the 20th century, most encryption, decryption, and cryptanalysis was done by hand. With the need for speed in the 20th century, machines and computers were built to enable more sophisticated cryptosystems and cryptanalytic methods to be developed and implemented. Some of these methods will be discussed in Section \ref{ch:symmetric}. The obvious problem is that it may be difficult or impossible for two people to share an encryption key. In the 1970s, researchers began to tackle this problem and devised several different creative solutions that has forever changed electronic communications and cryptography as a whole. This resulted in two new branches of cryptography: secure key exchange \index{key exchange} and {\bf public-key cryptography} \index{public-key cryptography} (or {\bf asymmetric-key} cryptography. This will be discussed in Section \ref{ch:pkc}. Public-key cryptography is the result of creative applications of various results of discrete mathematics that had previously been considered to be ``pure," in the sense that these results lacked any kind practical application. In light of this, a summary of necessary mathematics will be covered in Section \ref{ch:math}. Public-key cryptography has opened the door for solutions to countless other problems and applications, many of which will be covered in Section \ref{ch:protocols}. We will wrap up these notes with examples of personal encryption products, all of which are open-source, in Section \ref{ch:personal} and with topics for further study and final projects in Section \ref{ch:topics}. Some of these topics concern problems that will arise if quantum computing becomes a reality. The advent of quantum computing will forever change the face of cryptography and will certainly introduce new problems needing innovative solutions.
+
+	\section{A Selection of Cryptographic Problems}
+
+	What are some applications of cryptography? More precisely, what are some problems that have arisen that cryptographic methods have been applied to solve?
+
+	\begin{itemize}
+		\item Confidentiality: How can you encrypt a message so that unintended recipients will be unable to decipher the message (at least with high probability)?
+		\item Integrity: How can you be certain that a message or data set was not altered between the sender and receiver?
+		\item Key Exchange: How can two people agree on a private key over an insecure channel?
+		\item Public-key cryptography: How can you decouple the encryption and decryption process so that knowledge of the encryption function and encryption key makes it infeasible to decipher a message?
+		\item Zero-knowledge proofs: How can you prove possession of information without revealing any portion of the information?
+		\item Digital signatures, authentication, and identification: How do you digitally sign a message to prove that you're the one who sent it?
+		\item Nonrepudiation: How is it possible to make it impossible to deny that you have sent a message?
+		\item Coin-flipping: How do you digitally flip a coin and guarantee that neither side cheats?
+		\item Secret sharing: How do you divide a piece of information among a group of people so that only a predetermined number of people in the group can recover the information.
+
+	\end{itemize}
+
+	\section{Randomness Versus Structure}
+
+\paragraph*{Discussion} What is your idea of random or randomness? What are some ways to obtain truly random strings of digits, numbers, or letters? What is structure? What are examples of structures that appear to be random?
+
+\begin{problem}
+\label{prob-1} [10 points]
+The following ciphertext was intercepted by the enigmatic Quasi Lendrict. We don't believe that the encryption method that he chose was particularly sophisticated. Do your best to crack the message to reveal the plaintext, but any observation or partial solution will be helpful. Be mindful of some of the questions for discussion below.  \\
+\end{problem}
+{\tt
+\noindent NTLDX, EHRPLDXKHR XOP ZLUYFPB. XOPH TRPHXTNV KZZFTAKYFP XUUFD KHR BKGP K ZFKH. HPIX, \\
+\\
+AKLLV UEX XOP ZFKH. NTHKFFV, AOPAG VUEL DUFEXTUH XU DPP XOKX TX BKGPD DPHDP KHR DUFMPD\\
+\\
+ XOP ZLUYFPB. PIXPHR UL QPHPLKFTCP XOP ZLUYFPB UL XOP DUFEXTUH.}
+
+\paragraph*{Discussion.} What observations of the ciphertext did you make? What are some tools that you used to reveal the plaintext, whether in whole or in part? %The ciphertext looks like random letters, but is there any structure to it?
+
+
+\begin{problem}
+\label{prob-2} [20 points]
+The following ciphertext was intercepted by the enigmatic Quasi Lendrict. He apparently realized that he needed to eliminate some structure in his ciphertexts. Do your best to crack the message to reveal the plaintext, but any observation or partial solution will be helpful.\\
+\end{problem}
+{\tt
+\noindent PUDXT TXOJP DXROP NLHPL NDJON ZMEXK MDOOZ MEZAX XEOBK KDPNJ HHNBT PXOBO PDKWJ IIXFR LOHZP \\
+\\
+DOPNL HPLND OJMHD ZHNBT PZMZI BOPWJ IILOD ZMBOP NLHPL NDPXH NZHYP UDHNB TPXOB OPDKO HJDMP \\
+\\
+JRJHZ IIBNZ MEXKM DOOJO HZIID EDMPN XTBPU DXTTX OJPDJ OOPNL HPLND XNXNE DNYHH}
+
+\paragraph*{Discussion.} What are some similarities and differences between Problem \ref{prob-1} and Problem \ref{prob-2}?
+
+Read Chapter 15 of \cite{tw}, but rather than trying to absorb all of the notation, definitions, and theorems, get a feel for the big picture of what defines randomness and structure. The main motivation for this discussion on randomness and structure is that a cryptographer wants to obfuscate structure as much as possible so that any ciphertext that a cryptosystem produces appears random.
+
+	\section{Mathematical Hardness and Computational Complexity}
+	\label{ssec:mhcc}
+
+At times, we will describe the security of a cryptosystem based on the computational effort required to crack it using the best known attacks. When we talk of an algorithm, we mean some mathematical or computational recipe that gives you an output for a given input. The {\bf (computational complexity} \index{computational complexity} of an algorithm is a rough measure of the number of steps the algorithm requires to complete, as a function of the size of the input. A {\bf decision problem} \index{decision problem} is a problem that asks a ``yes or no" question. More generally, a {\bf computational problem}  \index{computational problem} is a problem that computes a solution to a problem. To distinguish this subtlety, consider the {\bf integer factorization problem}: \index{integer factorization problem} given an integer $n$, find all prime factors of $n$. This is a computational problem. We can transform this into the decision integer factorization problem. ``Given some $n\in\Z$, does $n$ have a prime factor less than some $0<c\in\R$?" This kind of rephrasing is one of the most common ways to turn a computational problem into a decision problem and shows that a computational problem is at least as hard as its corresponding decision problem in the sense that if a computational problem can be solved, then any corresponding decision problem is trivial. This leads us to formalize the concept of computational complexity somewhat rigorously.
+
+\begin{definition} An algorithm runs in {\bf polynomial time} \index{polynomial time} if the number of steps required to terminate is bounded above by a fixed polynomial function of the size (generally the number of {\bf bits}) \index{bits} of the input. The set of all decision problems that can be determined with a polynomial time algorithm is denoted $\P$. \index{$\P$}
+
+An algorithm runs in {\bf probabilistic polynomial time} \index{probabilistic polynomial time} if it terminates in polynomial time with high probability. The set of all decision problems that can be solved with high probability by a probabilistic polynomial time algorithm is denoted $\PP$. \index{$\PP$}
+\end{definition}
+
+In the case of the integer factorization problem, the size of the input $n$ is in fact the length of the binary representation of $n$, or the number of bits of $n$, which is also roughly $\lg(n)$, the binary logarithm of $n$. There is no known algorithm that solves either formulation of the integer factorization problem in deterministic or probabilistic polynomial time, so this problem is not in $\P$. However, multiplication and division only require a polynomial number of steps, as a function of the inputs, so the problem of verifying a solution to the integer factorization problem can be determined in polynomial time. This motivates more terminology.
+
+\begin{definition}
+	A decision problem is decided in {\bf non-deterministic polynomial time} \index{non-deterministic polynomial time} if there is no known algorithm to determine a yes or no answer answer to the problem in polynomial time, but given a solution to the problem, it can be verified in polynomial time that it does indeed answer the problem. The set of all decision problems that can be decided in non-deterministic polynomial time is denoted $\NP$. \index{$\NP$}
+
+	A decision problem that is at least as hard as any other problem in $\NP$ is said to be {\bf $\NP$-complete} \index{$\NP$-complete} and any computational problem that is at least as hard as an $\NP$-complete problem is said to be {\bf $\NP$-hard}. \index{$\NP$-hard}
+\end{definition}
+
+The only known algorithms that solve $\NP$-complete decision problems require an exponential number of steps, as a function of the size of the input, to terminate with a solution. We say that such algorithms run in {\bf exponential time}. \index{exponential time}
+
+Under these definitions, the integer factorization problem is in $\NP$, but is not $\NP$-complete because there are integer factorization algorithms, such as the Quadratic Sieve \index{Quadratic Sieve} and Number Field Sieve \index{Number Field Sieve}, that run faster than exponential time, but slower than polynomial time. Such algorithms are said to be {\bf subexponential time} \index{subexponential time} algorithms.
+
+To illustrate the subtle distinction between $\NP$-complete and $\NP$-hard, consider the Traveling Salesman Problem (TSP). The computational version is the problem of finding the shortest (or fastest or cheapest) route for a salesman to travel such that he visits each location in a given set, beginning and ending at the same location. The decision version asks, is there a route, as described above, that is less than some fixed distance (or time or cost). The decision TSP is $\NP$-complete, because the
+
+
+Any computational or decision problem that is in $\P$ or $\PP$ is often called {\bf tractable} or {\bf easy} \index{easy problem} because it's computationally easy to compute an answer either deterministically or with high probability. Deterministic or probabilistic polynomial time algorithms are often called {\bf fast} or {\bf efficient}. By contrast, any computational or decision problem that is not in $\P$ or $\PP$ is called {\bf intractable} or {\bf hard} \index{hard problem} because of the belief or expectation that any attempt to solve a large instance of such a problem will require too much computational effort.
+
+%One final piece of notation that will undoubtably arise is big-$O$ notation. This is a further refinement of the running time on an algorithm.
+%
+%\begin{definition}
+%The running time
+%\end{definition}
+
+\begin{problem} [10 points]
+Find an example of a computationally or mathematically hard problem. Is the problem a decision problem or computational problem? Does the problem have both a computational and decision description? If so, please describe both versions. Is the problem $\NP$-hard, $\NP$-complete, or just in  $\NP$? Were you able to find if there are any cryptosystems based on the intractability of the problem? How fast is the best known algorithm that solves the problem?
+\end{problem}
+
+Getting back to the subject at hand, when designing a cryptosystem, cryptographers want to base the security of the cipher or protocol on a computationally or mathematically hard problem. If cryptanalysis of a cryptosystem requires a polynomial number of steps, as a function of the size of the key, then the cryptosystem is insecure.

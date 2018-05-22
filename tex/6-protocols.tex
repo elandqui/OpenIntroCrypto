@@ -1,0 +1,265 @@
+\chapter{Cryptographic Protocols}
+\label{ch:protocols}
+	\section{Zero-Knowledge Proofs}
+
+Read \S 14.1 of \cite{tw}.
+
+\begin{problem}[10 points]
+	\S 14.3 \#1 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 14.3 \#2[a,b] of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 14.3 \#2[c] of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 14.3 \#3[a] of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 14.3 \#3[b, c] of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 14.3 \#4[a, b] of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 14.3 \#4[c, d] of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 14.3 \#5 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 14.3 \#6 of \cite {tw}
+\end{problem}
+
+	\section{Identification Schemes and Authentication}
+Read \S 14.2 of \cite{tw}.
+
+	%aka Authentication
+	\subsection{Message Authentication Codes}
+	\label{sssec:mac}
+
+\begin{definition}
+A {\bf message authentication code (MAC)} is data transmitted with a message that verifies that the message came from the stated sender (authentication) and that the data has not been altered during the transmission (integrity).
+\end{definition}
+
+	The following are examples of MAC algorithms and frameworks
+	\begin{itemize}
+		\item CBC-MAC
+		\item Checksum (using a hash function), e.g. md5sum, sha1sum
+		\item HMAC
+		\item Poly1305 and Poly1305-AES (Dan Bernstein)
+	\end{itemize}
+
+
+\begin{problem}  [15 points]
+
+	\begin{enumerate}
+		\item Who created the MAC, what is (are) their affiliation(s), and when was it developed?
+		\item How is the MAC or MAC framework used?
+		\item Discuss the details of the MAC or framework. Pictures help.
+		\item Discuss the security of the MAC or MAC framework.
+	\end{enumerate}
+\end{problem}
+
+
+	\section{Digital Signatures}
+	%Also Blind signatures
+
+	Read Chapter 9 of \cite{tw}.
+
+	Another signature scheme is Rabin's Signature Algorithm. Suppose that Alice sends a message $M$ to Bob. She wants to sign the message to prove to Bob that she alone sent the message.
+
+	\begin{enumerate}
+		\item Alice chooses two distinct primes $p,q\equiv 3\ppmod{4}$ and keeps these two primes private. (Ideally, $p$ and $q$ are {\bf safe} primes, i.e. primes such that $p=2r+1$ and $q = 2s+1$, where $r$ and $s$ are prime.)
+		\item Alice and Bob agree on a cryptographically secure hash function, $h$.
+		\item Alice chooses a random padding $u$ and concatenates $m=M||u$.
+		\item If $h(m)$ is not a quadratic residue modulo $p$ and modulo $q$, go back to Step 3.
+		\item Alice computes $s = \sqrt{h(m)}$ and sends $s$ and $m$ to Bob.
+		\item Bob verifies that $s^2 \equiv h(m) \ppmod{n}$.
+	\end{enumerate}
+
+
+\begin{problem}[10 points]
+	Why is Rabin's Signature Algorithm secure?
+\end{problem}
+
+\begin{problem}[10 points]
+	Choose two 3-digit safe primes and sign the message $M=1618$. Use a 1-digit pad and skip the use of a hash function.
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 9.6 \#1 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 9.6 \#2 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 9.6 \#3 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 9.6 \#4[a] of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 9.6 \#4[b] of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 9.6 \#4[c] of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 9.6 \#5 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 9.6 \#6 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 9.6 \#7 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 9.6 \#8 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 9.7 \#1 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 9.7 \#2 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 9.7 \#3 of \cite {tw}
+\end{problem}
+
+	\section{Secret Sharing and Threshold Schemes}
+
+Read Chapter 12 of \cite{tw}.
+	%Activity: encrypt a password as the constant term of a linear congruence. Give each student a point on the line. Have them determine the password.
+	% Have a "spy" with a fake point. Figure out who the spy is.
+
+\begin{problem}[10 points]
+	Let $p$ be the smallest prime greater than $2^{20}$ and let $q(x) = ax^2+bx+c \ppmod{p}$ be a quadratic polynomial modulo $p$. A PIN has been encoded as the constant term, $c$, of $q(x)$. Alice, Bob, and Charlie have been given the points of the curve $y=q(x)$: $(984544, 900317)$, $(248781, 118521)$, and $741200, 198787)$, respectively. Recover the PIN.
+% 314531
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 12.3 \#1 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 12.3 \#2 of \cite {tw}
+\end{problem}
+
+\begin{problem}[5 points]
+	\S 12.3 \#3 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 12.3 \#4 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 12.3 \#5 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 12.3 \#6 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 12.3 \#7 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 12.3 \#8 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 12.3 \#9 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 12.3 \#10 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 12.3 \#11 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 12.4 \#2 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 12.3 \#3 of \cite {tw}
+\end{problem}
+
+	\section{Digital Coin-Flipping}
+
+Read \S 13.1 of \cite{tw}.
+
+\begin{problem}[10 points]
+	\S 13.3 \#1[a] of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 13.3 \#1[b,c] of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 13.3 \#1[d] of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 13.3 \#2[a] of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 13.3 \#2[b,c] of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 13.3 \#2[d] of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 13.3 \#3[a, b] of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 13.3 \#3[c] of \cite {tw}
+\end{problem}
+
+
+	\section{Data Integrity}
+
+Read \S 10.8 of \cite{tw}.
+
+\begin{problem}[10 points]
+	\S 10.9 \#4 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 10.9 \#6 of \cite {tw}
+\end{problem}
+
+	%\section{Anonymity}
+
+	%\section{The Socialist Millionaire Problem}

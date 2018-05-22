@@ -1,0 +1,503 @@
+\chapter{Mathematical Interlude}
+\label{ch:math}
+	\section{Hash Functions}
+
+\begin{definition}
+A {\bf hash function} \index{hash function} $h:\{0,1\}^* \to \N$ is a function that maps an arbitrarily long input to an integer of some fixed size.
+\end{definition}
+
+Hash functions are commonly used in computer science primarily to store data in large arrays in a way that makes the data quick and easy to store and retrieve. Hash functions have different uses in cryptography, but require two additional properties in order to make them useful for cryptographic purposes.
+
+\begin{definition}
+A {\bf cryptographically secure hash function} is a hash function $h$ such that
+\begin{enumerate}
+\item $h$ is {\bf one-way}\index{one-way}, that is, given some element $r\in\N$ in the range of $h$, it is computationally infeasible to compute an input $m$ such that $h(m)=r$; and
+\item it is computationally infeasible to find a {\bf collision}, that is, two distinct elements $m_1$ and $m_2$ in the domain of $h$ such that $h(m_1) = h(m_2)$.
+\end{enumerate}
+\end{definition}
+
+The following are examples of hash functions that have once been or are considered to be cryptographically secure.
+
+	\begin{itemize}
+		\item MD5 (Ron Rivest)
+		\item MD6 (Ron Rivest et al.)
+		\item SHA-1 (NSA)
+		\item SHA-2 (NSA)
+		\item SHA-3 / Keccak (Guido Bertoni, Joan Daemen, Gilles Van Assche, and Micha\"{e}l Peeters
+	\end{itemize}
+
+	Read \S 8.1-8.3, 8.7 of \cite{tw}.
+
+	\section{The Birthday Problem}
+
+	The {\bf birthday problem}\index{birthday problem} is a standard cryptanalytic technique that is used to attack hash functions. It is also at the heart of an algorithm called Pollard's Rho algorithm for factoring integers and computing discrete logarithms. (\S 8.4.1 of \cite{tw})
+
+	Read \S 8.4 of \cite{tw}.
+
+\begin{problem} (10 points)
+	\S 8.8 Exercise \#1
+\end{problem}
+
+\begin{problem} (10 points)
+	\S 8.8 Exercise \#3
+\end{problem}
+
+\begin{problem} (20 points)
+	\S 8.8 Exercise \#5
+\end{problem}
+
+\begin{problem} (10 points)
+	\S 8.8 Exercise \#6
+\end{problem}
+
+\begin{problem} (5 points)
+	\S 8.8 Exercise \#8
+\end{problem}
+
+\begin{problem} (10 points)
+	\S 8.8 Exercise \#9
+\end{problem}
+
+\begin{problem} (15 points)
+	\S 8.8 Exercise \#10
+\end{problem}
+
+\begin{problem} (20 points)
+	\S 8.8 Exercise \#11
+\end{problem}
+
+\begin{problem} (10 points)
+	\S 8.9 Computer Problem \#1
+\end{problem}
+
+\begin{problem} (10 points)
+	\S 8.9 Computer Problem \#2
+\end{problem}
+
+	%\section{Computational Complexity}
+
+	\section{Group Theory}
+	\label{ssec-groups}
+
+\begin{definition}
+A {\bf group}\index{group} is a nonempty set $G$, together with a binary operation, $*$, such that the following four axioms hold.
+\begin{enumerate}
+	\item $G$ is {\bf closed} under the operation $*$. That is, for all $a, b\in G$, $a*b \in G$.
+	\item The operation $*$ is {\bf associative} in $G$. That is, for all $a, b, c\in G$, $(a*b)*c = a*(b*c)$.
+	\item $G$ possesses an {\bf identity element}, $e$. That is, for all $a \in G$, $e*a = a*e = a$.
+	\item Every element $a\in G$ has an {\bf inverse} in $G$. That is, for all $a\in G$, there is some element $a^{-1}\in G$ such that $a*a^{-1} = a^{-1}*a = e$. (If * is an additive operation, then the inverse of $a$ is typically denoted $-a$.
+\end{enumerate}
+\end{definition}
+Notice that groups need not be commutative. Such groups have a special name.
+\begin{definition}
+	If any two elements $a, b\in G$ commute under the operation $*$, that is, if $a*b = b*a$, for all $a,b\in G$, then $G$ is called an {\bf abelian}\index{abelian} group.
+\end{definition}
+
+\begin{problem}  [10 points]
+	Show that the set $\Z_n$ is an abelian group under the operation of addition modulo $n$.
+\end{problem}
+\begin{problem}  [10 points]
+	Show that the set $\Z_p^* = \{1, \ldots, p-1\}$ is an abelian group under the operation of multiplication modulo $p$.
+\end{problem}
+
+\begin{problem}  [10 points]
+	Show that the set $\Z_n^* = \{1\le a <n \mid \gcd(a, n)=1\}$ is an abelian group under the operation of multiplication modulo $n$.
+\end{problem}
+
+\begin{definition}
+	The number of elements of a group $G$ is called its {\bf order} and is denoted $|G|$.
+\end{definition}
+
+\begin{definition}
+{\bf Euler's phi (or totient) function}\index{phi function}\index{totient function} is defined to be $\varphi(n) = |\Z_n^*| = |\{1\le a <n \mid \gcd(a, n)=1\}|$.
+\end{definition}
+
+\begin{definition}
+If $G$ is a group, $H\subseteq G$, and $H$ is a group, then $H$ is called a {\bf subgroup}\index{subgroup} of $G$ and we write $H \le G$.
+\end{definition}
+
+\begin{definition}
+	The subgroup of $G$ {\bf generated} by $g\in G$ is the set $\<g\> = \{g^n \mid n\in\Z\}$. If there is some $g\in G$ such that $\<g\> = G$, then $G$ is called a {\bf cyclic} group and $g$ is called a {\bf generator} of $G$.
+\end{definition}
+
+\begin{definition}
+	If $p$ is a prime and $r\in\Z_p^*$ such that $\<r\>=\Z_p^*$, then $r$ is called a {\bf primitive root}\index{primitive root} modulo $p$.
+\end{definition}
+
+\begin{problem}  [15 points]
+Prove that all cyclic groups are abelian.
+\end{problem}
+
+\begin{problem}  [10 points]
+Find a generator of $\Z_{97}^*$.
+\end{problem}
+
+\begin{theorem}[Lagrange]
+\label{thm:lagrange}
+If $H\le G$, then $|H|\mid |G|$.
+\end{theorem}
+
+\begin{problem}[15 points]
+Prove Lagrange's Theorem (Theorem \ref{thm:lagrange}).
+\end{problem}
+
+
+	\section{Modular Exponentiation}
+
+	Read \S 3.5 of \cite {tw}.
+
+	In many situations, we must perform some exponentiation, say $a^x \ppmod{m}$, for some $m\in\N$, $a\in\Z_m$, and $x\in\Z$. If $|x|$ is very large, then we certainly do not want to multiply $a$ (or its inverse) by itself $|x|$ times. A common approach to compute this number is {\bf binary exponentiation}\index{binary exponentiation}. It is best illustrated with an example.
+
+{\bf Example.} Compute: $2^{42} \ppmod{97}$.
+
+We compute this using the binary representation of the exponent and make successive squarings.
+
+$2^{42} = 2^{32 + 8 + 2} = (2^{32})(2^8)(2^2).$
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$k$ & $2^k$ & $2^{2^k} \ppmod{97}$\\
+\hline
+0 & 1 & 2\\
+1 & 2 & $2^2 = 4$\\
+2 & 4 & $4^2 = 16$\\
+3 & 8 & $16^2 \equiv 62 \ppmod{97}$\\
+4 & 16 & $62^2 \equiv 61 \ppmod{97}$\\
+5 & 32 & $61^2 \equiv 35 \ppmod{97}$\\
+\hline
+\end{tabular}
+\end{center}
+So
+$$2^{42} = (2^{32})(2^8)(2^2) \equiv 35\cdot 62 \cdot 4 \equiv 47 \ppmod{97} \enspace .$$
+
+\begin{problem} [10 points]
+Compute $3^{409} \ppmod{997}$.
+\end{problem}
+
+\begin{problem}[10 points]
+Compute $3^{-251}\ppmod{997}$.
+\end{problem}
+
+\begin{problem}[15 points]
+What is the {\bf non-adjacent form} (NAF) of an integer and how can it be used to improve binary exponentiation?
+\end{problem}
+
+		\paragraph*{Fermat's Little Theorem}
+
+		\begin{theorem}[Fermat's Little Theorem]
+			If $p$ is a prime and $a\in \Z$ such that $p\nmid a$, then $a^{p-1} \equiv 1 \ppmod{p}$.
+		\end{theorem}
+
+		\begin{problem}  [10 points]
+			Prove Fermat's Little Theorem.
+		\end{problem}
+
+		\begin{problem} [15 points]
+			In Section \ref{ssec-groups}, we defined a primitive root of a prime $p$ as an integer $r$ such that $\<r\>=\Z_p^*$. Describe a method to determine whether or not a given $r\in\Z$ is a primitive root modulo $p$ that is more efficient than a brute-force search.
+		\end{problem}
+
+		\paragraph*{Euler's Theorem}
+
+		\begin{theorem}[Euler]
+			If $a,n\in\Z$ such that $\gcd(a,n)=1$, then $a^{\varphi(n)} \equiv 1 \ppmod{n}$.
+		\end{theorem}
+
+		\begin{problem}  [10 points]
+			Prove Euler's Theorem.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.13 \#2 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.13 \#11 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.13 \#12 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.13 \#13 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.13 \#15 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.13 \#16 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.13 \#17 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[20 points]
+			\S3.13 \#20 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[20 points]
+			\S3.13 \#21 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.14 \#3 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.14 \#7 of \cite{tw}.
+		\end{problem}
+
+		\begin{problem}[10 points]
+			\S3.14 \#9 of \cite{tw}.
+		\end{problem}
+
+		\paragraph*{Carmichael Function}
+
+\begin{definition}
+	The {\bf Carmichael function}, $\lambda:\N\to\N$, on input $n$ is the smallest positive integer $\lambda(n)$ such that $a^{\lambda(n)} \equiv 1\ppmod{n}$ for every $a$ that is relatively prime to $n$.
+\end{definition}
+
+
+		\paragraph*{Quadratic Residues and Modular Square Roots}
+
+		Stretching the concept of modular exponentiation, we can consider modular square roots. This has some interesting cryptographic applications that we will encounter later. Let's establish some terminology.
+
+
+\begin{definition}
+Let $n\in\Z$. An integer $a$ is said to be a {\bf quadratic residue}\index{quadratic residue} modulo $n$ if there is some $x\in\Z$ such that $x^2 \equiv a \ppmod{n}$. If $a$ is a quadratic residue modulo $n$ and $x^2 \equiv a \ppmod{n}$, then $x$ is a {\bf square root} of $a$ modulo $n$ and we can write $x \equiv \sqrt{a} \ppmod{n}$.
+
+For the case that $n=p$ is an odd prime, the {\bf Legendre symbol}\index{Legendre symbol} is defined:
+
+$$\left(\frac{a}{p}\right)  = \left\{\begin{array}{rl}
+-1 & \mbox{ if } a \mbox{ is not a quadratic residue modulo } p\\
+ 1 & \mbox{ if } a \mbox{ is a quadratic residue modulo } p\\
+ 0 & \mbox{ if } p\mid a.
+\end{array}\right.$$
+\end{definition}
+
+
+
+\begin{theorem}[Euler's Criterion]
+If $p$ is an odd prime and $a\in\Z$ such that $\left(\frac{a}{p}\right)=1$, then
+$$a^{\frac{p-1}{2}} \equiv \left(\frac{a}{p}\right) \ppmod{p}.$$
+\end{theorem}
+
+\begin{problem}[15 points]
+Prove Euler's Criterion.
+\end{problem}
+
+\begin{problem}[15 points]
+Prove that if $p$ is an odd prime and $p\nmid ab$, then
+$$\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right).$$
+\end{problem}
+
+\begin{problem}[10 points]
+If $p$ is an odd prime, determine $\left(\frac{-1}{p}\right)$.
+\end{problem}
+
+\begin{problem}[10 points]
+If $p$ is an odd prime and $a\equiv b \ppmod{p}$, then $\left(\frac{a}{p}\right)=\left(\frac{b}{p}\right)$.
+\end{problem}
+
+A much more efficient way to determine whether a given integer is a quadratic residue modulo an odd prime is to apply the Law of Quadratic Reciprocity.
+
+\begin{theorem}[Quadratic Reciprocity]
+Let $p$ and $q$ be odd primes.
+$$\left(\frac{2}{p}\right)=1 \mbox{ if and only if } p\equiv 1,7 \ppmod{8}$$
+$$\left(\frac{q}{p}\right) = \left\{ \begin{array}{rl}
+-\left(\frac{p}{q}\right) & \mbox{ if } p,q\equiv 3\ppmod{4}\\
+ \left(\frac{p}{q}\right) & \mbox{ otherwise. }
+\end{array}\right.$$
+\end{theorem}
+
+
+\begin{problem}[10 points]
+Find all quadratic residues modulo 19.
+\end{problem}
+
+Now we turn to actually computing modular square roots. For primes congruent to 1 modulo 4, the process can be a little involved. Fortunately, it is straightforward for all other primes, and these are the kinds of primes that cryptographers are most interested in.
+
+\begin{theorem}
+\label{thm:sqrtmodp}
+If $p\equiv 3 \ppmod{4}$ is prime and $\left(\frac{a}{p}\right)=1$, then $\sqrt{a} \equiv \pm a^{(p+1)/4}\ppmod{p}$.
+\end{theorem}
+
+\begin{problem}[10 points]
+Determine $\pm\sqrt{31}\ppmod{43}$.
+\end{problem}
+
+\begin{problem}[15 points]
+Prove Theorem \ref{thm:sqrtmodp}.
+\end{problem}
+
+\begin{problem}[10 points]
+Show that if $p$ is an odd prime and $a\in\Z$ such that $\left(\frac{a}{p}\right)=1$, then $x^2 \equiv a \ppmod{p}$ has two distinct solutions in $\Z_p^*$. (In other words, $a$ has two square roots modulo $p$.)
+\end{problem}
+
+Now if $n=pq$ is a product of primes, then we can compute square roots modulo $n$.
+\begin{theorem}
+\label{thm:sqrtmodn}
+Let $n=pq$ be a product of distinct primes and let $a\in\Z$ such that $\left(\frac{a}{p}\right)=\left(\frac{a}{q}\right)=1$. Then $a$ is a quadratic residue modulo $n$ and
+$$\sqrt{a} \equiv r_1dq + r_2cp \ppmod{n}\enspace ,$$
+where $r_1 \equiv \sqrt{a} \ppmod{p}$, $r_2 \equiv \sqrt{a} \ppmod{q}$, and $c,d\in\Z$ such that $cp+dq = 1$.
+\end{theorem}
+Notice that since $p=q$, $\gcd(p,q)=1$, so there do exist $c,d\in\Z$ such that $cp+dq=1$.
+
+\begin{problem}[15 points]
+Prove Theorem \ref{thm:sqrtmodn}.
+\end{problem}
+
+\begin{problem}[10 points]
+Find a quadratic residue modulo 77 and compute its square root modulo 77.
+\end{problem}
+
+\begin{problem}[15 points]
+Show that if $p$ and $q$ are distinct odd primes, $n=pq$ and $a\in\Z$ such that $\left(\frac{a}{p}\right)=\left(\frac{a}{q}\right)=1$, then $x^2 \equiv a \ppmod{n}$ has four distinct solutions in $\Z_p^*$. (In other words, $a$ has four square roots modulo $n$.)
+\end{problem}
+
+
+
+	\section{Discrete Logarithms}
+
+	\begin{definition}
+		Let $G$ be a group, $g\in G$, and $h\in\<g\>$. That is, there is some $x\in\N_0$ such that $g^x = h$. The integer $x$ is called the {\bf discrete logarithm} of $h$ in $\<g\>$.
+		If $p$ is prime and $g\in\Z_p^*$ such that $\<g\> = \Z_p^*$, then for some $h\in\Z_p^*$, the integer $x\in\N_0$ such that $g^x \equiv h \ppmod{p}$ is the discrete logarithm of $h$ to base $g$ modulo $p$.
+	\end{definition}
+
+Read \S 7.1 and 7.2 in \cite{tw}.
+
+\begin{problem}[10 points]
+	Compute $\log_2(3) \pmod{13}$.
+	Compute $\log_2(11) \ppmod{13}$.
+\end{problem}
+
+\begin{problem}[10 points]
+	Use Pohlig-Hellman to compute $\log_2(14) \ppmod{19}$.
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 7.6 \#5 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 7.6 \#6 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	\S 7.6 \#7 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 7.6 \#8 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 7.7 \#2 of \cite {tw}
+\end{problem}
+
+\begin{problem}[5 points]
+	\S 7.7 \#3 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 7.7 \#4 of \cite {tw}
+\end{problem}
+
+
+	\section{Primality Testing}
+
+Read \S6.3 of \cite{tw}.
+
+\begin{problem}[10 points]
+	\S 6.9 \#13 of \cite {tw}
+\end{problem}
+
+\begin{problem}[15 points]
+	Describe a method to test whether a given $n\in\N$ is composite or possibly prime.
+\end{problem}
+
+	\section{Integer Factorization}
+
+Read \S6.4 of \cite{tw}.
+
+\begin{problem}[10 points]
+	\S 6.8 \#12 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.8 \#13 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.9 \#4 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.9 \#5 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.9 \#6 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.9 \#8 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.9 \#9 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.9 \#10 of \cite {tw}
+\end{problem}
+
+\begin{problem}[10 points]
+	\S 6.9 \#12 of \cite {tw}
+\end{problem}
+
+	\section{Finite Fields}
+
+We learned about Linear Feedback Shift Registers earlier. To get a deeper understanding into why they function the way they do, we turn to finite fields. This section is also applied to many areas of cryptography and coding theory.
+
+Read \S 3.11 of \cite{tw}.
+
+	\begin{definition}
+          A {\bf field}\index{field} is a nonempty set $K$, together with two commutative binary operations, addition and multiplication, having the following properties.
+          \begin{itemize}
+            \item $K$ is an abelian group with identity $0$ under addition.
+            \item $K^* = K\setminus\{0\}$ is an abelian group with identity $1$ under multiplication.
+            \item $a(b+c) = ab + ac$ for all $a, b, c \in K$.
+          \end{itemize}
+        \end{definition}
+
+        \begin{problem} [10 points]
+          Give three examples of fields of infinite order (cardinality).
+        \end{problem}
+
+        \begin{problem} [10 points]
+          Show that $\Z_p = \{0, 1, \ldots, p-1\}$ is a field if and only if $p$ is prime. ($\Z_p$ will often be denoted $\F_p$ or $GF(p)$.)
+        \end{problem}
+
+        \begin{theorem}
+          If $K$ is a finite field, then $|K| = p^n$, for some prime $p$ and $n\in\N$. $K \isom \F_p[x]/\<f(x)\>$, where $f(x)\in\F_p[x]$ is irreducible.
+        \end{theorem}
+
+        \begin{problem} [20 points]
+          Show that if $p$ is a prime and $f(x)\in\F_p[x]$ is irreducible, then $\F_p[x]/\<f(x)\>$ is a field of order $p^n$.
+        \end{problem}
+
+	\begin{problem}[15 points]
+		\S3.13 \#33 of \cite{tw}.
+	\end{problem}
+
+	\begin{problem}[10 points]
+		\S3.13 \#34 of \cite{tw}.
+	\end{problem}
+
+        \begin{problem} [15 points]
+          Let $p = 2$. Find an irreducible cubic polynomial over $\F_2$. Describe the elements of $\F_{2^3}$.
+        \end{problem}

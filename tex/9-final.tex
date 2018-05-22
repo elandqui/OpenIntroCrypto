@@ -1,0 +1,63 @@
+\chapter{Final Report Topics}
+\label{ch:topics}
+	In this final chapter, we have included some topics for a final paper, if the instructor so desires to use this for a final assessment. The purpose of a final paper is to apply and extend topics that were covered in the course. Here are some suggested criteria for the final report.
+
+{\bf Criteria}
+	\begin{itemize}
+		\item Apply and extend at least one topic from the course.
+		\item Research at least one cryptographic topic that was not covered in the course.
+		\item Provide at least one meaningful example.
+		\item Use at least three references, at least two of which are books or peer-reviewed scholarly articles.
+	\end{itemize}
+
+{\bf Timeline}
+	\begin{enumerate}
+		\item Choose a topic.
+		\item Write and submit a tentative outline (sections, subsections, etc.) with a (possibly partial) list of references.
+		\item Write and submit a rough draft.
+		\item Submit the final draft.
+	\end{enumerate}
+
+The following is a list of suggested topics and is by no means exhaustive. Some points below contain multiple topics, but are grouped together based on thematic similarities. Some of the names may look scary, but a brief description follows each topic to alleviate any fear. If you have an idea for a topic not on this list, you are encouraged to discuss the topic with your instructor as early as possible in order to refine and focus the idea and to get some good references to get started. Some topics will require somewhat more extensive background knowledge in number theory, abstract algebra, probability, computer science, or linear algebra.
+
+{\bf Topics}
+	\begin{itemize}
+		\item Digital cash and cryptocurrencies\\
+		Before Bitcoin, digital cash systems relied on a central certifying authority (a bank) to regulate any transaction and generally did not discuss the creation of money. Bitcoin changed the digital cash paradigm by uniting the creation of digital money and the decentralization of transaction authentication. Since Bitcoin, hundreds of other so-called {\em cryptocurrencies} have been created based on Bitcoin concepts. For background on digital cash, read \S 11.1 in \cite{tw}.
+		\item{The blockchain concept}\\
+		Bitcoin introduced the concept of the blockchain, but numerous other applications of this digital technology have been considered. Describe the mathematics and algorithms of a blockchain and its potential uses besides cryptocurrencies.
+		\item{Homomorphic encryption}\\
+		How does one perform arithmetic on encrypted data without first decrypting the data? Homomorphic encryption provides solutions. Applications range from voting to banking. Question: Can the concepts of homomorphic encryption be applied to the Bitcoin concept to further anonymize transactions? This topic will require knowledge in abstract algebra, since it applies the concept of a homomorphism.
+		\item{Hyperelliptic curves}\\
+		Hyperelliptic curves are a generalization of elliptic curves. They provide security equivalent to elliptic curves with some trade-offs: one can work with smaller numbers, which speeds up arithmetic, but the arithmetic rules are more complex than that of elliptic curves.
+		\item{Identity-based encryption}\\
+		Alice wants to send Bob an encrypted message, but how does Alice know that Bob's publicly available public key wasn't changed by an eavesdropper? Wouldn't it be nice if Bob's public key was his email address or phone number? This is the concept of identity-based encryption. Read \S 16.6 in \cite{tw} to get started.
+		\item{Cryptanalysis of block and stream ciphers (e.g. Linear and Differential Cryptanalysis)}\\
+		What are some of the tricks of the trade for cracking block and stream ciphers? By cracking, we mean getting information about the key and/or plaintext, in whole or in part. Read \S 4.3 of \cite{tw} to get started on differential cryptanalysis.
+		\item{Integer factorization (e.g. Dixon’s Random Squares, Quadratic Sieve)}\\
+		The security of RSA rests on the presumed difficulty of factoring a large composite number. The best general-purpose factoring algorithm today, the (General) Number Field Sieve (GNFS), builds a difference of squares. While the GNFS is quite technical, some of the foundational concepts that are applied in Dixon's Random Squares and Pomerance's Quadratic Sieve are rather accessible. Read \S 6.4.1 and try Problem \#28 in \S 6.9 in \cite{tw} to get started on the Quadratic Sieve.
+		\item{Computing group orders and discrete logarithms (e.g. index calculus, Rho, Kangaroo)}\\
+		The security of the Diffie-Hellman Key Exchange and other discrete logarithm-based cryptosystems relies on the difficulty to compute discrete logarithms and group orders. Methods include the Pohlig-Hellman Algorithm, index calculus, Shanks' Baby-Step Giant-Step Algorithm, Pollard's Rho Method, and Pollard's Kangaroo Method. Read \S 7.2.1, 7.2.2, or 7.2.3 of \cite{tw} to get started on the Pohlig-Hellman Algorithm, Baby-Step Giant-Step, or index calculus, respectively.
+		\item{Quantum cryptography}\\
+		Most cryptosystems today are designed to be secure when using a classical computer. However, properties of quantum particles give rise to a whole new paradigm of computing, called {\em quantum computing}. Techniques have been developed for key exchange and commitment, among others. Read \S 19.1 and \S19.2 of \cite{tw} to get started.
+		\item{Shor's Algorithm}\\
+		If a sufficiently large quantum computer can be (has been) built, then integers will be able to be factored and discrete logarithms can be computed in polynomial time using Shor's Algorithm, rendering RSA insecure. Read \S 19.3 of \cite{tw} to get started.
+		\item{Post-quantum cryptography}\\
+		If a sufficiently large quantum computer can be (has been) built, then we will need to use cryptosystems that do not rely on integer factorization or discrete logarithms in order to guarantee security. Examples include lattice-based cryptosystems, multivariate cryptography, and hash-based cryptography.
+		\item{Coding Theory (Error-correcting codes)}\\
+		How can we tell if data has been altered, either intentionally or because of transmission over a noisy channel? If data has been altered, can the original data be recovered? There are a number of techniques of introducing {\em redundancy} to detect and eve correct errors. These redundancy systems are called {\em codes}. To get started on coding theory, read Chapter 18 of \cite{tw}.
+		\item{Lattices, LLL, and NTRU}\\
+		A lattice is a remarkably straightforward geometric concept, yet is the source of a number of hard problems that form the foundation for some cryptosystems, and provide techniques for cracking cases of RSA. Read Chapter 17 of \cite{tw} to get started with lattices.
+		\item{Onion and Garlic Routing / Tor and I2P}\\
+		How do you keep your online activities anonymous? Various protocols have been developed to protect your online privacy and to prevent internet service providers, advertising agencies, data miners, and government agencies from spying on you. What are the underlying cryptographic protocols and concepts that go into all this?
+		\item Digital watermarking\\
+		Digital watermarking is like digital steganography and authentication combined. A digital watermark is a message embedded in a file that identifies the owner of the file. It is used to identify copyright violations.
+                \item Steganalysis \\
+                  Describe at least one method of performing steganalysis (detection of steganography) that uses advanced mathematical methods. If you detect any steganography ``in the wild,'' this would be a major component of the project.
+		\item Broadcast encryption\\
+		How do you send an encrypted message to a set of people in which each person has their own unique decryption key? Broadcast encryption technology is used with cable TV and DVDs.
+		\item Other cryptosystems: Look under the hood\\
+		Find an example of a cryptosystem (public-key or private-key), application, or protocol that we have not studied, or only superficially, and give a deeper description and analysis.
+		\item Be creative\\
+		Devise your own cryptosystem, protocol, or application and analyze it.
+	\end{itemize}
