@@ -1,5 +1,5 @@
 # OpenIntroCrypto
-This is an open (OER) introductory cryptography textbook designed for active / inquiry-based learning.
+This is an open (OER) introductory cryptography textbook designed for active / inquiry-based learning and released under a Creative Commons Attribution Share Alike 4.0 (CC-BY-SA 4.0) license.
 
 <b>History and Philosophy of the Book:</b>
   The initial development of this textbook was supported by a Small Grant from the Educational Advancement Foundation, via the Academy of Inquiry-Based Learning in the summer of 2015. This book
