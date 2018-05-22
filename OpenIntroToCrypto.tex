@@ -1,0 +1,130 @@
+\documentclass{book}
+\usepackage{amssymb, amsmath, amsthm, eso-pic, graphicx, makeidx, url, xcolor} %hyperref
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\<}{\left\langle}
+\renewcommand{\>}{\right\rangle}
+\newcommand{\C}{{\bf C}}
+\newcommand{\ch}{\operatorname{char}}
+\newcommand{\EXP}{\mathcal{EXP}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Fp}{\F_p}
+\newcommand{\Fq}{\F_q}
+\newcommand{\ideal}[1]{\left\langle {#1} \right\rangle }
+\newcommand{\isom}{\cong}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\NP}{\mathcal{NP}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\ord}{\operatorname{ord}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\ppmod}[1]{\mbox{\ $\left(\mathrm{mod}\ {#1}\right)$}}
+\newcommand{\PP}{\mathcal{PP}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\sig}{\operatorname{sig}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\st}{\mid}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\veca}{\vec{a}}
+\newcommand{\vecb}{\vec{b}}
+\newcommand{\xor}{\oplus}
+\newcommand{\Z}{\mathbb{Z}}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\makeindex
+
+%\newcommand\BackgroundPic{\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill
+%\centering
+%\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/cover.jpg}%
+%\vfill
+%}}}
+\begin{document}
+%\AddToShipoutPicture*{\BackgroundPic}
+
+\title{Open Introduction to Cryptography}
+\author{Eric Landquist}
+%\date{\today}
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+%\newpage
+%~\vfill
+\thispagestyle{empty}
+\noindent Copyright \copyright\ 2018 Eric Landquist CC-BY-SA 4.0\\ % Copyright notice
+
+\noindent This text is licensed under a Creative Commons Attribution-Share Alike 4.0 United
+States License.\\
+
+To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/us/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+You are free:
+\begin{itemize}
+	\item {\bf to Share} — to copy, distribute, display, and perform the work
+	\item {\bf to Remix} — to make derivative works
+\end{itemize}
+Under the following conditions:
+\begin{itemize}
+	\item {\bf Attribution.} You must attribute the work in the manner specified by the author or licensor (but not in anyway that suggests that they endorse you or your use of the work).
+	\item {\bf Share Alike.} If you alter, transform, or build upon this work, you may distribute the resulting work only under the same, similar or a compatible license.
+\end{itemize}
+With the understanding that:
+\begin{itemize}
+	\item {\bf Waiver.} Any of the above conditions can be waived if you get permission from the copyright holder.
+	\item {\bf Other Rights.} In no way are any of the following rights affected by the license:
+		\begin{itemize}
+			\item Your fair dealing or fair use rights;
+			\item Apart from the remix rights granted under this license, the author's moral rights;
+			\item Rights other persons may have either in the work itself or in how the work is used, such as publicity or privacy rights.
+			\item Notice — For any reuse or distribution, you must make clear to others the license terms of this work. The best way to do this is with a link to this web page:
+http://creativecommons.org/licenses/by-sa/4.0/us/
+\end{itemize}
+\end{itemize}
+\noindent {\bf Acknowledgments.} I gratefully acknowledge support for the initial development of this book by the Educational Advancement Foundation in the summer of 2015. \\ % License information
+
+\noindent \textit{First release, May 2018} % Printing/edition date
+
+\tableofcontents
+
+\input{tex/0-notation}
+\input{tex/1-whatiscrypto}
+\input{tex/2-classic}
+\input{tex/3-symmetric}
+\input{tex/4-math}
+\input{tex/5-publickey}
+\input{tex/6-protocols}
+\input{tex/7-blockchain}
+\input{tex/8-personal}
+\input{tex/9-final}
+
+%\chapter{Cipher Challenges}
+
+\backmatter
+\bibliographystyle{plain}
+\bibliography{introtocrypto}
+\addcontentsline{toc}{chapter}{References}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\appendix
+\chapter{Tabula Recta}
+\label{app:tabularecta}
+This is a standard table for using some substitution ciphers, such as Vigen\`ere's Cipher and the Running Key Cipher.
+
+The left column is the plaintext, the top row is the key, and the contents of the table are the ciphertext.
+
+\begin{center}
+\includegraphics{img/tabularecta.png}
+\end{center}
+
+\end{document}
