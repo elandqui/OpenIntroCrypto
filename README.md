@@ -1,6 +1,8 @@
 # OpenIntroCrypto
 This is an open (OER) introductory cryptography textbook designed for active / inquiry-based learning and released under a Creative Commons Attribution Share Alike 4.0 (CC-BY-SA 4.0) license.
 
+Read below for some unique ways that you can help [**support**](#support) this project.
+
 <b>History and Philosophy of the Book:</b>
   The initial development of this textbook was supported by a Small Grant from the Educational Advancement Foundation, via the Academy of Inquiry-Based Learning in the summer of 2015. This book
   was then used in the Spring 2016 semester for an introductory course in cryptography for
@@ -19,3 +21,20 @@ This is an open (OER) introductory cryptography textbook designed for active / i
   * Create both PDF and HTML versions of the book, like Rob Beezer's Linear Algebra text.
   * Incorporate Sage cells and Sage code throughout the text. (Sage is a free computer algebra system built on top of Python and will allow for computations of cryptographic size.)
   * Development of homework problems for the MAA's Open Problem Library for WeBWorK (http://webwork.maa.org/wiki/National_Problem_Library).
+  
+## Support Open Applied Calculus <a name="support"></a>
+You can support this project in some unique ways that will be a win-win-win situation for you, students, and me.
+ 
+ * The halving is quickly approaching! **Invest in Bitcoin**, cryptocurrencies, or US Dollar-pegged *stablecoins* via an exchange through my referral links.
+   - <a href="https://www.coinbase.com/join/landqu_e">**Coinbase**</a>: a very user-friendly crypto exchange.
+   - <a href="https://www.binance.us/?ref=35061022">**Binance.US**</a>: another great crypto exchange with low trading fees.
+   - <a href="https://blockfi.com/?ref=12bd8405">**BlockFi**</a>: a crypto and stablecoin savings account with phenomenal interest rates.
+ 
+ Please contact me if you would like any of the following in return for a donation to the project.
+  * Include **advertisements** on the cover or within the text, e.g. homework sections, separate page, etc.
+  * Include **coupons** for your products and services within the text.
+  * Include homework sets, examples, or projects that **highlight your organization's products and/or services**.
+  * Create **brand recognition** among college students. (Students will have more money to spend if their book is free.)
+  * **Recruit talent** among students who use this textbook.
+  
+  * <a href="https://www.gofundme.com/oac-textbook">Go to the GoFundMe page for another OER project of mine: Open Applied Calculus</a> to support the development of that textbook and ancillary materials.
