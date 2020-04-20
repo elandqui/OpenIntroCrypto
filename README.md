@@ -23,12 +23,21 @@ Read below for some unique ways that you can help [**support**](#support) this p
   * Development of homework problems for the MAA's Open Problem Library for WeBWorK (http://webwork.maa.org/wiki/National_Problem_Library).
   
 ## Support Open Applied Calculus <a name="support"></a>
-You can support this project in some unique ways that will be a win-win-win situation for you, students, and me.
+You can support this project in some unique ways that will be a win-win-win situation for you, students, and me. A portion will be redonated for local COVID-19 relief.
  
  * The halving is quickly approaching! **Invest in Bitcoin**, cryptocurrencies, or US Dollar-pegged *stablecoins* via an exchange through my referral links.
    - <a href="https://www.coinbase.com/join/landqu_e">**Coinbase**</a>: a very user-friendly crypto exchange.
    - <a href="https://www.binance.us/?ref=35061022">**Binance.US**</a>: another great crypto exchange with low trading fees.
    - <a href="https://blockfi.com/?ref=12bd8405">**BlockFi**</a>: a crypto and stablecoin savings account with phenomenal interest rates.
+ 
+ * Direct donations
+   - * <a href="https://www.gofundme.com/oac-textbook">Go to the GoFundMe page for another OER project of mine: Open Applied Calculus</a> to support the development of that textbook and ancillary materials.
+   - **Bitcoin** 1FE3XvPCKq3r2uLP2g4y4tpsJNw8Zn2Sc3
+   - **Ether** 0x740c44daCc510fF8770CF55782dDa38825926F97
+   - **Litecoin** LKd2QWwVBJkJXrLH4qbbr4gXDxDHFdRTzH
+   - **Bitcoin Cash** bitcoincash:qzkln5aeqsnk5qsrwda4757v3578g9lmsuy073dcsq
+   - **Tezos** tz1bJjiguDmWACvmXkyTUqVMjx1wSwNnZfcP
+   - Other cryptos? Ask me and I'll send you my receiving address. 
  
  Please contact me if you would like any of the following in return for a donation to the project.
   * Include **advertisements** on the cover or within the text, e.g. homework sections, separate page, etc.
@@ -37,4 +46,4 @@ You can support this project in some unique ways that will be a win-win-win situ
   * Create **brand recognition** among college students. (Students will have more money to spend if their book is free.)
   * **Recruit talent** among students who use this textbook.
   
-  * <a href="https://www.gofundme.com/oac-textbook">Go to the GoFundMe page for another OER project of mine: Open Applied Calculus</a> to support the development of that textbook and ancillary materials.
+  
