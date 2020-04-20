@@ -31,7 +31,7 @@ You can support this project in some unique ways that will be a win-win-win situ
    - <a href="https://blockfi.com/?ref=12bd8405">**BlockFi**</a>: a crypto and stablecoin savings account with phenomenal interest rates.
  
  * Direct donations
-   - * <a href="https://www.gofundme.com/oac-textbook">Go to the GoFundMe page for another OER project of mine: Open Applied Calculus</a> to support the development of that textbook and ancillary materials.
+   - <a href="https://www.gofundme.com/oac-textbook">Go to the GoFundMe page for another OER project of mine: Open Applied Calculus</a> to support the development of that textbook and ancillary materials.
    - **Bitcoin** 1FE3XvPCKq3r2uLP2g4y4tpsJNw8Zn2Sc3
    - **Ether** 0x740c44daCc510fF8770CF55782dDa38825926F97
    - **Litecoin** LKd2QWwVBJkJXrLH4qbbr4gXDxDHFdRTzH
