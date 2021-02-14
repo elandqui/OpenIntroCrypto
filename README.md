@@ -12,7 +12,15 @@ Read below for some unique ways that you can help [**support**](#support) this p
 <!--
 [![BlockFi](https://raw.githubusercontent.com/elandqui/OpenAppliedCalculus/master/img/support/blockFi/blockfi-banner0.png "Earn up to 8.6\% APY on your dollar-backed stablecoins and up to 6\% APY on crypto with BlockFi! Receive up to a \$250 Bitcoin bonus when you click and fund a new BlockFi account. Terms apply.")](https://blockfi.mxuy67.net/c/2612759/889697/10568)
 -->
+
+<a href="https://bit.ly/3pP7ruB"><img src="/img/support/medishare/Medi-ShareLogo.webp" border="0" alt="MediShare" width="637" height="134"/></a>
+
+
 **[BlockFi:](https://blockfi.mxuy67.net/c/2612759/889697/10568")** Earn up to 8.6\% APY on your dollar-backed stablecoins and up to 6\% APY on crypto with BlockFi! Receive up to a \$250 Bitcoin bonus when you click and fund a new BlockFi account. Terms apply.
+
+**[MediShare:](https://bit.ly/3pP7ruB)** Members save around 50% on healthcare costs, with options for individuals, families, groups, and seniors. Medi-Share is a healthcare sharing community that believes there is a BETTER way to do healthcare.
+
+**[CryptoTab Browser:](https://cryptotabbrowser.com/16356908)** Browse the internet and mine Bitcoin!
 
 **[Brave Browswer:](https://brave.com/ela242)** Download the <a href="https://brave.com/ela242">Brave internet browser</a>, a privacy-minded browser that earns you Basic Attention Tokens (BAT) for browsing. If you have the Brave browser, you can click on the BAT icon to "tip" me in BAT.
 
@@ -47,6 +55,7 @@ You can support this project in some unique ways that will be a win-win-win situ
 
  * Affiliate Partners
     - **BlockFi:** <a href="https://blockfi.mxuy67.net/c/2612759/889697/10568">Earn up to 8.6\% APY on your crypto with BlockFi! Receive up to a \$250 Bitcoin bonus when you click and fund a new BlockFi account. Terms apply.</a>
+    - **MediShare:** <a href = "https://bit.ly/3pP7ruB">Unlike traditional health insurance, Medi-Share is a healthcare sharing community that believes there is a BETTER way to do healthcare. </a>
 
  * Cryptocurrencies are a great investment. **Earn, Mine, and Invest in Bitcoin**, cryptocurrencies, or US Dollar-pegged *stablecoins* through my referral links.
    - <a href="https://blockfi.mxuy67.net/c/2612759/889697/10568">**BlockFi**</a>: a crypto and stablecoin savings account with phenomenal interest rates up to 8.6\% APY! 
