@@ -1,13 +1,12 @@
 # OpenIntroCrypto
 This is an open (OER) introductory cryptography textbook designed for active / inquiry-based learning and released under a Creative Commons Attribution Share Alike 4.0 (CC-BY-SA 4.0) license.
 
-Read below for some unique ways that you can help [**support**](#support) this project, like visiting the **affiliates** below, **advertising** with me, and **investing in Bitcoin**! There is also a <a href="https://www.gofundme.com/manage/oac-textbook">GoFundMe page to support Open Applied Calculus</a>. 
+Read below for some unique ways that you can help [**support**](#support) this project, like visiting the **affiliates** below, **advertising** with me, and **investing in Bitcoin**! There is also a <a href="https://www.gofundme.com/manage/oac-textbook">GoFundMe page to support Open Applied Calculus</a>.
 
 ## Affiliate Partners
+<!-- <a href="https://blockfi.mxuy67.net/c/2612759/889697/10568"><img src="https://raw.githubusercontent.com/elandqui/OpenAppliedCalculus/master/img/support/blockFi/blockfi-banner0.png" border="0" alt="BlockFi" width="970" height="250"/></a> -->
+<!-- <a href="https://blockfi.mxuy67.net/c/2612759/889697/10568"><img src="/img/support/blockFi/blockfi-banner0.png" border="0" alt="BlockFi" width="970" height="250"/></a> -->
 <!--
-<a href="https://blockfi.mxuy67.net/c/2612759/889697/10568"><img src="https://raw.githubusercontent.com/elandqui/OpenAppliedCalculus/master/img/support/blockFi/blockfi-banner0.png" border="0" alt="BlockFi" width="970" height="250"/></a>
--->
-<a href="https://blockfi.mxuy67.net/c/2612759/889697/10568"><img src="/img/support/blockFi/blockfi-banner0.png" border="0" alt="BlockFi" width="970" height="250"/></a>
 
 <!--
 [![BlockFi](https://raw.githubusercontent.com/elandqui/OpenAppliedCalculus/master/img/support/blockFi/blockfi-banner0.png "Earn up to 8.6\% APY on your dollar-backed stablecoins and up to 6\% APY on crypto with BlockFi! Receive up to a \$250 Bitcoin bonus when you click and fund a new BlockFi account. Terms apply.")](https://blockfi.mxuy67.net/c/2612759/889697/10568)
@@ -19,7 +18,7 @@ Read below for some unique ways that you can help [**support**](#support) this p
 
 **[Cointelegraph Market Pro:](https://marketspro.sjv.io/jWDPqZ)** A simple and easy-to-use dashboard powered by the same technology and data used by the leading institutional investors — at a fraction of the cost.
 
-**[BlockFi:](https://blockfi.mxuy67.net/c/2612759/889697/10568")** Earn up to 8.6\% APY on your dollar-backed stablecoins and up to 6\% APY on crypto with BlockFi! Receive up to a \$250 Bitcoin bonus when you click and fund a new BlockFi account. Terms apply.
+<!-- **[BlockFi:](https://blockfi.mxuy67.net/c/2612759/889697/10568")** Earn up to 8.6\% APY on your dollar-backed stablecoins and up to 6\% APY on crypto with BlockFi! Receive up to a \$250 Bitcoin bonus when you click and fund a new BlockFi account. Terms apply. -->
 
 **[MediShare:](https://bit.ly/3pP7ruB)** Members save around 50% on healthcare costs, with options for individuals, families, groups, and seniors. Medi-Share is a healthcare sharing community that believes there is a BETTER way to do healthcare.
 
@@ -57,13 +56,13 @@ Those wishing to support the development of this textbook will be acknowledged i
 You can support this project in some unique ways that will be a win-win-win situation for you, students, and me. A portion will be redonated for local COVID-19 relief.
 
  * Affiliate Partners
-    - **BlockFi:** <a href="https://blockfi.mxuy67.net/c/2612759/889697/10568">Earn up to 8.6\% APY on your crypto with BlockFi! Receive up to a \$250 Bitcoin bonus when you click and fund a new BlockFi account. Terms apply.</a>
+    <!-- - **BlockFi:** <a href="https://blockfi.mxuy67.net/c/2612759/889697/10568">Earn up to 8.6\% APY on your crypto with BlockFi! Receive up to a \$250 Bitcoin bonus when you click and fund a new BlockFi account. Terms apply.</a> -->
     - **MediShare:** <a href = "https://bit.ly/3pP7ruB">Unlike traditional health insurance, Medi-Share is a healthcare sharing community that believes there is a BETTER way to do healthcare. </a>
 
     - **Cointelegraph Markets Pro:** <a href = "https://marketspro.sjv.io/jWDPqZ">A simple and easy-to-use dashboard powered by the same technology and data used by the leading institutional investors — at a fraction of the cost.</a>
 
  * Cryptocurrencies are a great investment. **Earn, Mine, and Invest in Bitcoin**, cryptocurrencies, or US Dollar-pegged *stablecoins* through my referral links.
-   - <a href="https://blockfi.mxuy67.net/c/2612759/889697/10568">**BlockFi**</a>: a crypto and stablecoin savings account with phenomenal interest rates up to 8.6\% APY! 
+   <!-- - <a href="https://blockfi.mxuy67.net/c/2612759/889697/10568">**BlockFi**</a>: a crypto and stablecoin savings account with phenomenal interest rates up to 8.6\% APY! -->
    - <a href="https://www.coinbase.com/join/landqu_e">**Coinbase**</a>: a very user-friendly crypto exchange.
    - <a href="https://coinbase.com/earn/xlm/invite/cq8rgxt4"> Learn about Stellar Lumens (XLM) in Coinbase Earn and earn XLM!</a>
    - <a href="https://coinbase.com/earn/oxt/invite/39h7v158"> Learn about Orchid (OXT) in Coinbase Earn and earn OXT!</a>
@@ -89,6 +88,3 @@ You can support this project in some unique ways that will be a win-win-win situ
   * Include homework sets, examples, or projects that **highlight your organization's products and/or services**.
   * Create **brand recognition** among college students. (Students will have more money to spend if their book is free.)
   * **Recruit talent** among students who use this textbook.
-
-
-
